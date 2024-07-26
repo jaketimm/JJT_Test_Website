@@ -577,9 +577,9 @@ iframe {
   #cs-footer-274 {
     padding: var(--sectionPadding);
     position: fixed;
-    bottom: 10pix;
+    bottom: 3%;
     /* Adjust as needed */
-    right: 10px;
+    right: 3%;
     /* Adjust as needed */
     text-align: center;
     z-index: 1;
