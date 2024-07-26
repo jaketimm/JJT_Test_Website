@@ -74,8 +74,34 @@ body {
   background-image: url('teton_mountains_bw.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 100% 100%;
+  background-size: cover; /* Scale the image to cover the entire element */
+  background-position: center; /* Center the image */
 }
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  .home-page {
+    background-attachment: scroll; /* Change attachment to scroll on mobile */
+    background-size: cover; /* Ensure the image covers the background area */
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  .home-page {
+    background-attachment: fixed; /* Fix the image attachment for tablets */
+    background-size: cover; /* Ensure the image covers the background area */
+  }
+}
+
+/* Small Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+  .home-page {
+    background-attachment: fixed; /* Fix the image attachment for desktops */
+    background-size: cover; /* Ensure the image covers the background area */
+  }
+}
+
 
 /*-- -------------------------- -->
 <--    Other Backgrounds        -->
@@ -629,9 +655,9 @@ iframe {
 @media only screen and (min-width: 48rem) {
   #cs-footer-274 .cs-container {
     position: fixed;
-    bottom: 10px;
+    bottom: 3%;
     /* Adjust as needed */
-    right: 10px;
+    right: 3%;
     /* Adjust as needed */
     text-align: center;
   }
@@ -648,9 +674,9 @@ iframe {
 @media only screen and (min-width: 64rem) {
   #cs-footer-274 .cs-container {
     position: fixed;
-    bottom: 10px;
+    bottom: 3%;
     /* Adjust as needed */
-    right: 10px;
+    right: 3%;
     /* Adjust as needed */
     text-align: center;
   }
@@ -680,8 +706,9 @@ body {
 }
 
 .about_container {
-  max-width: 800px;
-  margin: 0 auto;
+
+  max-width: 75%;
+  margin: 15vh 0 auto;
   padding: 20px;
 }
 
