@@ -84,8 +84,8 @@ body {
     background-attachment: scroll; /* Change attachment to scroll on mobile */
     background-size: cover; /* Ensure the image covers the background area */
     background-position: center; /* Center the image */
-    height: auto;
-    width: 100vh;
+    height: 100vh;
+    width: 100vw;
   }
 }
 
