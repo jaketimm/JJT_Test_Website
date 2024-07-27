@@ -1227,7 +1227,7 @@ body {
   }
 
   #contact-1388 .cs-container {
-    width: 100%;
+    width: 80%;
     /* changes to 1280px at tablet */
     max-width: 36.5rem;
     margin: auto;
@@ -1265,7 +1265,7 @@ body {
 
   #contact-1388 .cs-ul {
     text-align: left;
-    width: 100%;
+    width: 80%;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
