@@ -169,7 +169,8 @@ body {
   }
 }
 
-.video-grid {
+@media only screen and (min-width: 64rem) {
+  .video-grid {
   display: grid;
   grid-template-columns: 1fr; /* Single column layout */
   gap: 2%; /* 2% gap between video containers */
@@ -179,8 +180,8 @@ body {
   transform: translateX(-50%); /* Adjust horizontal centering */
   width: 60%; /* Set overall player width to a percentage of the screen width */
   padding-bottom: 5%;
+  }
 }
-
 .video-container {
   width: 100%; /* Set width to 100% of the grid container */
   height: auto; /* Maintain aspect ratio based on width */
