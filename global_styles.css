@@ -155,6 +155,7 @@ body {
   left: 50%; /* Center horizontally */
   transform: translateX(-50%); /* Adjust horizontal centering */
   width: 60%; /* Set overall player width to a percentage of the screen width */
+  padding-bottom: 5%;
 }
 
 .video-container {
