@@ -257,10 +257,11 @@ iframe {
     align-items: center;
   }
 
+  /* Set size of mobile version of logo */
   #cs-navigation .cs-logo {
-    width: 4%;
+    width: 8%;
     max-width: 9.125rem;
-    height: 4%;
+    height: 8%;
     margin: 0 auto 0 0;
     /* prevents padding and border from affecting height and width */
     box-sizing: border-box;
