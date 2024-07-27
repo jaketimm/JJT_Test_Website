@@ -158,6 +158,25 @@ body {
   padding-bottom: 5%;
 }
 
+/* Tablet */
+@media only screen and (min-width: 48rem) {
+  .video-grid {
+    width: 90%; /* Adjust width to be larger on smaller screens */
+    top: 10%; /* Reduce top margin to better fit smaller screens */
+    padding-bottom: 10%; /* Increase padding for better spacing */
+  }
+}
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  .video-grid {
+    width: 95%; /* Further adjust width for small screens */
+    top: 5%; /* Further reduce top margin */
+    padding-bottom: 15%; /* Increase padding for small screens */
+    gap: 1%; /* Reduce gap between video containers */
+  }
+}
+
 .video-container {
   width: 100%; /* Set width to 100% of the grid container */
   height: auto; /* Maintain aspect ratio based on width */
