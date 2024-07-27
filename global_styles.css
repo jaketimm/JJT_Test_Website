@@ -1231,6 +1231,7 @@ body {
     /* changes to 1280px at tablet */
     max-width: 36.5rem;
     margin: auto;
+    margin-top: 5%;
     display: flex;
     justify-content: center;
     align-items: stretch;
