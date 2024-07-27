@@ -146,17 +146,7 @@ body {
 /*-- -------------------------- -->
 <---     YT Players Grid        -->
 <--- -------------------------- -*/
-.video-grid {
-  display: grid;
-  grid-template-columns: 1fr; /* Single column layout */
-  gap: 2%; /* 2% gap between video containers */
-  position: absolute; /* Absolute positioning */
-  top: 15%; /* 15% from the top of the page */
-  left: 50%; /* Center horizontally */
-  transform: translateX(-50%); /* Adjust horizontal centering */
-  width: 60%; /* Set overall player width to a percentage of the screen width */
-  padding-bottom: 5%;
-}
+
 
 /* Tablet */
 @media only screen and (min-width: 48rem) {
@@ -177,6 +167,18 @@ body {
     padding-bottom: 15%; /* Increase padding for small screens */
     gap: 1%; /* Reduce gap between video containers */
   }
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr; /* Single column layout */
+  gap: 2%; /* 2% gap between video containers */
+  position: absolute; /* Absolute positioning */
+  top: 15%; /* 15% from the top of the page */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Adjust horizontal centering */
+  width: 60%; /* Set overall player width to a percentage of the screen width */
+  padding-bottom: 5%;
 }
 
 .video-container {
