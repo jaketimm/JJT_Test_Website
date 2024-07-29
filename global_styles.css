@@ -1271,21 +1271,7 @@ body {
     margin: auto;
     position: relative;
   }
-  #hero-229 .cs-container:before {
-    /* Left Line */
-    content: '';
-    width: 1px;
-    height: 100%;
-    background: -moz-linear-gradient(top, rgba(250, 251, 252, 0.5) 0%, rgba(250, 251, 252, 0) 100%);
-    /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, rgba(250, 251, 252, 0.5) 0%, rgba(250, 251, 252, 0) 100%);
-    /* Chrome10-25,Safari5.1-6 */
-    opacity: 1;
-    position: absolute;
-    display: block;
-    top: 0;
-    left: 0;
-  }
+
   #hero-229 .cs-flex-group {
     /* 60px - 220px */
     margin-bottom: clamp(3.75rem, 15.5vw, 13.75rem);
@@ -1385,6 +1371,7 @@ body {
     text-decoration: none;
     font-weight: 700;
     margin: 0;
+    margin-top: 2%;
     color: #fff;
     padding: 0;
     background-color: transparent;
