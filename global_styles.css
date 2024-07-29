@@ -1268,7 +1268,7 @@ body {
     /* 144px - 280px - leaving extra space for the navigation */
     /* changes on tablet */
     margin: auto;
-    margin-top: 25%;
+    margin-top: 10%;
     position: relative;
   }
 
