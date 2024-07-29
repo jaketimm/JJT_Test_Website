@@ -1215,6 +1215,7 @@ body {
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
   .home-page {
+    background-image: url('teton_mountains_bw-m.jpg');
     background-attachment: scroll; /* Change attachment to scroll on mobile */
     background-size: cover; /* Ensure the image covers the background area */
     background-position: center; /* Center the image */
