@@ -1269,6 +1269,7 @@ body {
     /* changes on tablet */
     padding: clamp(9rem, 25.95vw, 17.5rem) 0;
     margin: auto;
+    margin-bottom: 1%;
     position: relative;
   }
 
@@ -1331,7 +1332,7 @@ body {
     text-decoration: none;
     min-width: 9.375rem;
     margin: 0;
-    margin-bottom: 2%;
+    margin-bottom: 5%;
     /* prevents padding from adding to the width */
     box-sizing: border-box;
     padding: 0 3rem;
@@ -1372,7 +1373,7 @@ body {
     text-decoration: none;
     font-weight: 700;
     margin: 0;
-    margin-bottom: 2%;
+    margin-bottom: 5%;
     color: #fff;
     padding: 0;
     background-color: transparent;
