@@ -1331,6 +1331,7 @@ body {
     text-decoration: none;
     min-width: 9.375rem;
     margin: 0;
+    margin-bottom: 2%;
     /* prevents padding from adding to the width */
     box-sizing: border-box;
     padding: 0 3rem;
@@ -1371,7 +1372,7 @@ body {
     text-decoration: none;
     font-weight: 700;
     margin: 0;
-    margin-top: 2%;
+    margin-bottom: 2%;
     color: #fff;
     padding: 0;
     background-color: transparent;
