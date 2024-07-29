@@ -1269,7 +1269,6 @@ body {
     /* changes on tablet */
     padding: clamp(9rem, 25.95vw, 17.5rem) 0;
     margin: auto;
-    margin-bottom: 1%;
     position: relative;
   }
 
