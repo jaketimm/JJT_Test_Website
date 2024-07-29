@@ -705,7 +705,7 @@ body {
 @media only screen and (min-width: 0rem) {
   #content-page-852 {
     padding: var(--sectionPadding);
-    background-color: #181818;
+    /*background-color: #181818; */
     ;
     /* clips the wave background from causing overflow issues when it goes off screen */
     overflow: hidden;
@@ -925,7 +925,7 @@ body {
 @media only screen and (min-width: 0rem) {
   #contact-1388 {
     padding: var(--sectionPadding);
-    background-color: #181818;
+    /*background-color: #181818; */
     position: relative;
     z-index: 1;
 
@@ -1295,7 +1295,7 @@ body {
     text-align: center;
     letter-spacing: 0.1rem;
     font-weight: 700;
-    color: var(--primaryLight);
+    color: #000;
     margin-bottom: 1rem;
     display: block;
   }
