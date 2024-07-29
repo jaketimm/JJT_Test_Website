@@ -1270,6 +1270,7 @@ body {
     padding: clamp(6rem, 20vw, 14rem) 0;
     margin: auto;
     position: relative;
+    overflow: hidden;
   }
 
   #hero-229 .cs-flex-group {
