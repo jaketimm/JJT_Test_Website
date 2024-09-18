@@ -33,4 +33,24 @@ for (const item of dropDowns) {
 	};
 	item.addEventListener('click', onClick);
 }
-                                
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Single function to adjust padding based on the navigation header height
+function adjustSectionsOffset() {
+    // Get the height of the navigation header
+    const header = document.getElementById('cs-navigation');
+    if (!header) return;  // Ensure header exists
+
+    const headerHeight = header.offsetHeight;
+
+    // Adjust Topper Section
+    const topperSection = document.getElementById('RPsbs-products');
+    if (topperSection) {
+        topperSection.style.paddingTop = `${headerHeight}px`;
+    }
+
+}
+
+// Attach event listeners 
+window.addEventListener('load', adjustSectionsOffset);
+window.addEventListener('resize', adjustSectionsOffset);
