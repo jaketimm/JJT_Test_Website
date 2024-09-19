@@ -54,3 +54,14 @@ function adjustSectionsOffset() {
 // Attach event listeners 
 window.addEventListener('load', adjustSectionsOffset);
 window.addEventListener('resize', adjustSectionsOffset);
+
+
+
+// FAQ Boxes
+const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
+for (const item of faqItems) {
+    const onClick = () => {
+        item.classList.toggle('active')
+    }
+    item.addEventListener('click', onClick)
+}
