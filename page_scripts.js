@@ -37,17 +37,17 @@ for (const item of dropDowns) {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Single function to adjust padding based on the navigation header height
 function adjustSectionsOffset() {
-    // Get the height of the navigation header
-    const header = document.getElementById('cs-navigation');
-    if (!header) return;  // Ensure header exists
+	// Get the height of the navigation header
+	const header = document.getElementById('cs-navigation');
+	if (!header) return;  // Ensure header exists
 
-    const headerHeight = header.offsetHeight;
+	const headerHeight = header.offsetHeight;
 
-    // Adjust Topper Section
-    const topperSection = document.getElementById('RPsbs-products');
-    if (topperSection) {
-        topperSection.style.paddingTop = `${headerHeight}px`;
-    }
+	// Adjust Topper Section
+	const topperSection = document.getElementById('RPsbs-products');
+	if (topperSection) {
+		topperSection.style.paddingTop = `${headerHeight}px`;
+	}
 
 }
 
@@ -60,8 +60,35 @@ window.addEventListener('resize', adjustSectionsOffset);
 // FAQ Boxes
 const faqItems = Array.from(document.querySelectorAll('.cs-faq-item'));
 for (const item of faqItems) {
-    const onClick = () => {
-        item.classList.toggle('active')
-    }
-    item.addEventListener('click', onClick)
+	const onClick = () => {
+		item.classList.toggle('active')
+	}
+	item.addEventListener('click', onClick)
+}
+
+
+
+// Cycle the home page background image.
+const images = [
+	'images/20180815_100849.jpg',
+	'images/20180816_184505.jpg',
+	'images/20180816_190002.jpg'
+];
+
+let currentIndex = 0;
+
+function changeBackground() {
+	const homePage = document.querySelector('.home-page');
+	homePage.style.backgroundImage = `url('${images[currentIndex]}')`;
+
+}
+
+function nextImage() {
+	currentIndex = (currentIndex + 1) % images.length; // Move to next image
+	changeBackground();
+}
+
+function prevImage() {
+	currentIndex = (currentIndex - 1 + images.length) % images.length; // Move to previous image
+	changeBackground();
 }
