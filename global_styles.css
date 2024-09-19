@@ -115,7 +115,7 @@ body {
   .home-page {
     /* Initial image */
     background-image: url('images/20180815_100849.jpg');
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-size: cover;
     /* Ensure the image covers the background area */
     background-position: center;
