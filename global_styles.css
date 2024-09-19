@@ -2457,3 +2457,235 @@ body {
     flex-wrap: nowrap;
   }
 }
+
+/*-- -------------------------- -->
+<---          Services          -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #services-690 {
+      padding: var(--sectionPadding);
+      padding-bottom: 0;
+      padding-top: 5%;
+  }
+
+  #services-690 .bcw-container {
+      width: 100%;
+      /* changes to 1280px at tablet */
+      max-width: 34.375rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+      border-bottom: solid 2px var(--primary);
+  }
+
+  #services-690 .bcw-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: left;
+      /* Adjust width based on size of titles */
+      width: 60%;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: flex-start;
+  }
+
+  #services-690 .bcw-text {
+      text-align: center;
+  }
+
+  #services-690 .bcw-text a {
+      color: var(--linkcolor);
+      text-decoration: none;
+      /* Remove underline */
+      font-weight: bold;
+      /* Make text bold */
+  }
+
+  #services-690 .bcw-card-group {
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      flex-direction: column;
+      row-gap: 1rem;
+  }
+
+  #services-690 .bcw-item {
+      list-style: none;
+      width: 100%;
+      /* 24px - 40px top & bottom */
+      padding: clamp(1.25rem, 4vw, 2.5rem) 1.5rem;
+      box-sizing: border-box;
+      transition:
+          background-color 0.3s,
+          transform 0.3s,
+          box-shadow 0.3s;
+      max-height: 400px;
+
+  }
+
+
+  #services-690 .bcw-link {
+      text-decoration: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+  }
+
+  #services-690 .bcw-picture {
+      width: 4rem;
+      height: 4rem;
+      margin: 0;
+      margin-bottom: 1.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      background-color: #fff;
+      box-shadow: 0px 12px 30px rgba(26, 26, 26, 0.04);
+      position: relative;
+      z-index: 1;
+      border: 2px solid black;
+      /* Adjust the width and color as needed */
+  }
+
+  #services-690 .bcw-icon {
+      height: 2rem;
+      width: auto;
+
+  }
+
+  #services-690 .bcw-h3 {
+      font-size: 1.25rem;
+      font-weight: 900;
+      text-align: center;
+      line-height: 1.2em;
+      margin: 0;
+      margin-bottom: 0.75rem;
+      color: var(--bodyTextColorInverted);
+      transition: color 0.3s;
+  }
+
+  #services-690 .bcw-item-text {
+      /* 14px - 16px */
+      font-size: clamp(0.875rem, 1.5vw, 1rem);
+      text-align: center;
+      line-height: 1.5em;
+      margin: 0;
+      color: var(--bodyTextColorInverted);
+      transition: color 0.3s;
+  }
+
+  #services-690 .bcw-title {
+      display: inline-block;
+      position: relative;
+      color: var(--primary);
+      /*padding-left: 10px; /* Adjusted padding for better alignment */
+      margin-bottom: 0;
+      text-align: center;
+      /* Ensures text is left-aligned */
+  }
+
+  #services-690 .bcw-flex-group {
+      flex: none;
+      display: flex;
+      /* Ensures items inside are aligned properly if needed */
+      flex-direction: column;
+      /* Align items in a vertical column */
+  }
+
+  #services-690 .bcw-title::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      /* Ensures the vertical line is aligned to the left edge */
+      top: 0;
+      bottom: 0;
+      width: 3px;
+      /* Width of the vertical line */
+      /*background-color: #fff8f8; /* Line color */
+  }
+
+  #services-690 .bcw-title-second-line {
+      color: var(--primary);
+      font-size: var(--headerFontSize);
+      font-weight: 900;
+      line-height: 1.2em;
+      max-width: 43.75rem;
+      /* Ensures text does not exceed this width */
+      position: relative;
+      text-align: center;
+      /* Ensures text is left-aligned */
+  }
+
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 760px) {
+  #services-690 .bcw-container {
+      max-width: 80rem;
+  }
+
+  #services-690 .bcw-content {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      gap: 3rem;
+      width: 75%;
+  }
+
+
+
+  #services-690 .bcw-flex-group {
+      width: 50%;
+  }
+
+  #services-690 .bcw-card-group {
+      /* pushes down the same amount the 2nd cards are translated down to maintain the even spacing at the bottom of the bcw-card-group */
+      margin-bottom: 2.5rem;
+      flex-direction: row;
+      justify-content: center;
+      flex-wrap: wrap;
+      column-gap: 1.25rem;
+  }
+
+  #services-690 .bcw-item {
+      width: 30vw;
+      max-width: 25.8125rem;
+  }
+
+}
+
+/* Mobile */
+@media only screen and (max-width: 759px) {
+
+  #services-690 .bcw-item {
+      max-height: 400px;
+  }
+
+  #services-690 .bcw-content {
+      align-items: center;
+      width: 100%;
+      /* Takes up full width of its container */
+  }
+
+  #services-690 .bcw-flex-group {
+      align-items: center;
+  }
+
+  #services-690 .bcw-title-second-line {
+      margin-bottom: 5%;
+  }
+
+}
+
+
