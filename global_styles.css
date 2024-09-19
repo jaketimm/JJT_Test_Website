@@ -166,9 +166,10 @@ body {
 }
 
 /* Media query for better responsiveness */
-@media (orientation: landscape) and (max-width: 48rem) {
+/* Keeps hero section from being cutoff on a rotated phone */
+@media (orientation: landscape) and (max-width: 64rem) {
   .home-page {
-    height: 412px;
+    height: 1024px;
   }
 }
 
