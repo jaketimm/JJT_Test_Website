@@ -120,9 +120,9 @@ body {
     /* Ensure the image covers the background area */
     background-position: center;
     /* Center the image */
-    height: auto;
+    height: 100vw;
     /* scale image for smaller screen */
-    width: 100vw;
+    width: auto;
   }
 
   .home-page::before {
