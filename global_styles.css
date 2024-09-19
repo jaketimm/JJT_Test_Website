@@ -121,7 +121,6 @@ body {
   width: 100vw; /* Scale image for smaller screens */
   height: 100vh; /* Set height to full viewport height */
   position: relative; /* Add position relative for the ::before pseudo-element */
-  overflow: hidden; /* Prevent any overflow issues */
 }
 
 .home-page::before {
@@ -163,6 +162,13 @@ body {
     height: 100vh;
     /* scale image for smaller screen */
     width: auto;
+  }
+}
+
+/* Media query for better responsiveness */
+@media (orientation: landscape) and (max-width: 48rem) {
+  .home-page {
+    height: 412px;
   }
 }
 
@@ -1586,6 +1592,7 @@ body {
   }
 
 }
+
 
 /*-- -------------------------- -->
 <---            FAQ             -->
