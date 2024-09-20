@@ -209,7 +209,7 @@ body {
 
 @media only screen and (max-width: 600px) {
   .arrow {
-    background-color: none; 
+    background-color: rgba(0, 0, 0, 0); /* Change this to your desired color and opacity */
   }
 }
 .arrow:hover {
