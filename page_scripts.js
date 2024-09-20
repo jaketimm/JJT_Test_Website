@@ -134,3 +134,25 @@ window.addEventListener('resize', () => {
 
 // Set images on load
 window.addEventListener('load', initialize);
+
+
+//////////////////////////////////////////////////////////
+// Preload the homepage background images that are initially hidden
+// After page finishes loading
+document.addEventListener('DOMContentLoaded', () => {
+    function preloadImages(imageArray) {
+        imageArray.forEach((image) => {
+            const img = new Image();
+            img.src = image; // This starts loading the image
+        });
+    }
+
+	// All hidden images that aren't the initial background
+    const imagesToPreload = [
+		'images/20180816_184505.jpg',
+		'images/20180816_190002.jpg',
+		'images/20180816_184505 - m.jpg',
+		'images/20180816_190002 - m.jpg'
+    ];
+    preloadImages(imagesToPreload);
+});
