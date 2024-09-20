@@ -67,6 +67,15 @@ for (const item of faqItems) {
 }
 
 
+// Cycle the home page background image.
+function setHeight() {
+	const vh = window.innerHeight * 0.01; // Get 1% of the viewport height
+	document.documentElement.style.setProperty('--vh', `${vh}px`); // Set the CSS variable
+}
+
+window.addEventListener('load', setHeight);
+window.addEventListener('resize', setHeight);
+
 
 // Cycle the home page background image.
 const images = [
