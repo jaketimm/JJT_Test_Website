@@ -70,41 +70,69 @@ for (const item of faqItems) {
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 // JS for full page background image with button advance
 // Set the height of the background image on load, make sure it doesn't resize
-function setFullHeight() {
-	const homePage = document.querySelector('.home-page');
-	homePage.style.height = `${window.innerHeight}px`;
-}
+//function setFullHeight() {
+//	const homePage = document.querySelector('.home-page');
+//	homePage.style.height = `${window.innerHeight}px`;
+//}
 
 // Set height on load
-window.addEventListener('load', setFullHeight);
+//window.addEventListener('load', setFullHeight);
 // Listen for orientation changes
-window.addEventListener('orientationchange', handleOrientationChange);
 
-function handleOrientationChange() {
-    setFullHeight();
-}
 
 // Cycle the home page background image.
-const images = [
+const imagesDesktop = [
 	'images/20180815_100849.jpg',
 	'images/20180816_184505.jpg',
 	'images/20180816_190002.jpg'
 ];
 
+// cropped versions of images to use for 650px width of less
+const imagesMobile = [
+    'images/20180815_100849 - m.jpg',
+	'images/20180816_184505 - m.jpg',
+	'images/20180816_190002 - m.jpg'
+];
+
 let currentIndex = 0;
+let images = [];
 
+// Function to set images based on screen size
+function setImages() {
+    images = (window.innerWidth < 650) ? imagesMobile : imagesDesktop; // Adjust the width as needed
+}
+
+// Function to change the background image
 function changeBackground() {
-	const homePage = document.querySelector('.home-page');
-	homePage.style.backgroundImage = `url('${images[currentIndex]}')`;
-
+    const homePage = document.querySelector('.home-page');
+    homePage.style.backgroundImage = `url('${images[currentIndex]}')`;
 }
 
+// Function to move to the next image
 function nextImage() {
-	currentIndex = (currentIndex + 1) % images.length; // Move to next image
-	changeBackground();
+    currentIndex = (currentIndex + 1) % images.length; // Move to next image
+    changeBackground();
 }
 
+// Function to move to the previous image
 function prevImage() {
-	currentIndex = (currentIndex - 1 + images.length) % images.length; // Move to previous image
-	changeBackground();
+    currentIndex = (currentIndex - 1 + images.length) % images.length; // Move to previous image
+    changeBackground();
 }
+
+// Initialize the images and set the initial background
+function initialize() {
+    setImages();
+    changeBackground();
+}
+
+// Update images on resize
+window.addEventListener('resize', () => {
+    const previousIndex = currentIndex; // Save the current index
+    setImages();
+    currentIndex = Math.min(previousIndex, images.length - 1); // Ensure currentIndex is within bounds
+    changeBackground();
+});
+
+// Set images on load
+window.addEventListener('load', initialize);

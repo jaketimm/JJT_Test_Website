@@ -118,6 +118,7 @@ body {
   background-size: cover;
   background-position: center;
   width: 100vw;
+  height: 100vh;
   position: relative;
 }
 
@@ -177,8 +178,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-left: 3%;
-  padding-right: 3%;
+  padding-left: 1%;
+  padding-right: 1%;
   z-index: 1; /* Ensure it's above the background */
 }
 
@@ -186,9 +187,10 @@ body {
   background: none;
   border: none;
   color: white;
-  font-size: 30px;
+  font-size: 32px;
+  line-height: 32px; /* Same as font size, makes sure the arrow stays centered correctly */
   cursor: pointer;
-  outline: none;
+  background-color: rgba(0, 0, 0, 0.5); /* Change this to your desired color and opacity */
   transition: color 0.3s;
 }
 
@@ -1422,8 +1424,6 @@ body {
     /* 144px - 280px - leaving extra space for the navigation */
     /* changes on tablet */
     padding: clamp(4.5rem, 13.75rem, 8.75rem) 0;
-    padding-right: 5%;
-    padding-left: 5%;
     padding-bottom: 0;
     margin: auto;
     position: relative;
