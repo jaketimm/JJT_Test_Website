@@ -123,6 +123,7 @@ body {
   width: 100vw;
   height: 100vh;
   position: relative;
+  overflow: hidden;
 
 }
 
@@ -147,6 +148,7 @@ body {
     height: 100vh;
     /* scale image for smaller screen */
     width: auto;
+    overflow: visible;
 
   }
 }
@@ -159,6 +161,7 @@ body {
     height: 1080px; 
     /* scale image for smaller screen */
     width: auto;
+    overflow: visible;
 
   }
 }
@@ -170,6 +173,7 @@ body {
     background-image: url('images/20180815_100849.jpg'); /* set to destop version of first image */
     height: 1555px; /* Height of image */
     width: auto;
+    overflow: visible;
  
   }
 }
