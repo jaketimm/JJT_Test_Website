@@ -67,6 +67,9 @@ for (const item of faqItems) {
 }
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+// JS for full page background image with button advance
+// Set the height of the background image on load, make sure it doesn't resize
 function setFullHeight() {
 	const homePage = document.querySelector('.home-page');
 	homePage.style.height = `${window.innerHeight}px`;

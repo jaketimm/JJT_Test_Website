@@ -135,7 +135,7 @@ body {
 
 
 /* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
+@media only screen and (min-width: 37.5) {
   .home-page {
     background-attachment: fixed;
     /* Fix the image attachment for tablets */
