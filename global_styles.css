@@ -115,14 +115,14 @@ body {
 <-      using arrows and JS     -->
 <--- -------------------------- -*/
 .home-page {
-  transition: background-image 1s ease-in-out; /* Adjust the duration and timing function as needed */
-  background-image: url('images/20180815_100849 - m.jpg');
+  background-image: url('images/20180815_100849 - m.jpg');  /* set to mobile version of first image */
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
   width: 100vw;
   height: 100vh;
   position: relative;
+  transition: background-image 1s ease-in-out; /* Adjust the duration and timing function as needed */
 }
 
 
@@ -141,29 +141,32 @@ body {
 /* Tablet - 768px */
 @media only screen and (min-width: 37.5) {
   .home-page {
-    background-image: url('images/20180815_100849.jpg');
+    background-image: url('images/20180815_100849.jpg'); /* set to destop version of first image */
     height: 100vh;
     /* scale image for smaller screen */
     width: auto;
+    transition: background-image 1s ease-in-out; /* Adjust the duration and timing function as needed */
   }
 }
 
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 70rem) {
   .home-page {
-    background-image: url('images/20180815_100849.jpg');
+    background-image: url('images/20180815_100849.jpg'); /* set to destop version of first image */
     height: 1080px; 
     /* scale image for smaller screen */
     width: auto;
+    transition: background-image 1s ease-in-out; /* Adjust the duration and timing function as needed */
   }
 }
 
 /* Large Desktop */
 @media only screen and (min-width: 92rem) {
   .home-page {
-    background-image: url('images/20180815_100849.jpg');
+    background-image: url('images/20180815_100849.jpg'); /* set to destop version of first image */
     height: 1555px; /* Height of image */
     width: auto;
+    transition: background-image 1s ease-in-out; /* Adjust the duration and timing function as needed */
   }
 }
 
@@ -200,6 +203,13 @@ body {
   transition: color 0.3s;
 }
 
+@media only screen and (max-width: 600px) {
+  .arrow {
+    margin-bottom: 2px; /* Vertical offset */
+    /* Alternatively, you can use transform for more precise positioning */
+    /* transform: translate(10px, 2px); */
+  }
+}
 .arrow:hover {
   color: #ccc; /* Change color on hover */
 }
