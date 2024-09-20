@@ -139,20 +139,38 @@ window.addEventListener('load', initialize);
 //////////////////////////////////////////////////////////
 // Preload the homepage background images that are initially hidden
 // After page finishes loading
+// Preload the homepage background images that are initially hidden
 document.addEventListener('DOMContentLoaded', () => {
-    function preloadImages(imageArray) {
-        imageArray.forEach((image) => {
+    function preloadImages(images) {
+        images.forEach((image) => {
             const img = new Image();
             img.src = image; // This starts loading the image
         });
     }
 
-	// All hidden images that aren't the initial background
-    const imagesToPreload = [
-		'images/20180816_184505.jpg',
-		'images/20180816_190002.jpg',
-		'images/20180816_184505 - m.jpg',
-		'images/20180816_190002 - m.jpg'
+    // Desktop images to preload
+    const imagesDesktop = [
+        'images/20180816_184505.jpg',
+        'images/20180816_190002.jpg'
     ];
+    
+    // Mobile images to preload
+    const imagesMobile = [
+        'images/20180816_184505 - m.jpg',
+        'images/20180816_190002 - m.jpg'
+    ];
+    
+    // Function to set images based on screen size
+    function setImages() {
+        return (window.innerWidth < 650) ? imagesMobile : imagesDesktop; // Adjust the width as needed
+    }
+
+    // Preload images based on the initial screen size
+    const imagesToPreload = setImages();
     preloadImages(imagesToPreload);
+
+    // Optional: Add an event listener to handle window resize and preload again if needed
+    window.addEventListener('resize', () => {
+        preloadImages(setImages()); // Preload again if the size changes
+    });
 });
