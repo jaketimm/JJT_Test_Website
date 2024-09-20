@@ -68,18 +68,7 @@ for (const item of faqItems) {
 
 
 /////////////////////////////////////////////////////////////////////////////////////////////////////
-// JS for full page background image with button advance
-// Set the height of the background image on load, make sure it doesn't resize
-//function setFullHeight() {
-//	const homePage = document.querySelector('.home-page');
-//	homePage.style.height = `${window.innerHeight}px`;
-//}
-
-// Set height on load
-//window.addEventListener('load', setFullHeight);
-// Listen for orientation changes
-
-
+// JS to move between images using arrow buttons on page. There is a transition fade b/t images
 // Cycle the home page background image.
 const imagesDesktop = [
 	'images/20180815_100849.jpg',
@@ -102,11 +91,20 @@ function setImages() {
     images = (window.innerWidth < 650) ? imagesMobile : imagesDesktop; // Adjust the width as needed
 }
 
-// Function to change the background image
+// Function to change the background image with fade b/t images
 function changeBackground() {
-    const homePage = document.querySelector('.home-page');
-    homePage.style.backgroundImage = `url('${images[currentIndex]}')`;
+
+	const homePage = document.querySelector('.home-page');
+
+	setTimeout(() => {
+		homePage.style.backgroundImage = `url('${images[currentIndex]}')`;
+	
+		// Fade in effect
+		homePage.style.opacity = 1; // Fade back in
+	}, 1000); // Match this duration with the CSS transition duration
+
 }
+
 
 // Function to move to the next image
 function nextImage() {

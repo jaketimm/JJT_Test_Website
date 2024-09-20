@@ -111,9 +111,12 @@ body {
 
 /*-- -------------------------- -->
 <- Single Page Background image -->
+<-   Fades b/t multiple images  -->
+<-      using arrows and JS     -->
 <--- -------------------------- -*/
 .home-page {
-  background-image: url('images/20180815_100849.jpg');
+  transition: background-image 1s ease-in-out; /* Adjust the duration and timing function as needed */
+  background-image: url('images/20180815_100849 - m.jpg');
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -138,6 +141,7 @@ body {
 /* Tablet - 768px */
 @media only screen and (min-width: 37.5) {
   .home-page {
+    background-image: url('images/20180815_100849.jpg');
     height: 100vh;
     /* scale image for smaller screen */
     width: auto;
@@ -147,6 +151,7 @@ body {
 /* Small Desktop - 1024px */
 @media only screen and (min-width: 70rem) {
   .home-page {
+    background-image: url('images/20180815_100849.jpg');
     height: 1080px; 
     /* scale image for smaller screen */
     width: auto;
@@ -156,6 +161,7 @@ body {
 /* Large Desktop */
 @media only screen and (min-width: 92rem) {
   .home-page {
+    background-image: url('images/20180815_100849.jpg');
     height: 1555px; /* Height of image */
     width: auto;
   }
@@ -188,7 +194,7 @@ body {
   border: none;
   color: white;
   font-size: 32px;
-  line-height: 32px; /* Same as font size, makes sure the arrow stays centered correctly */
+  line-height: 36px; /* Same as font size, makes sure the arrow stays centered correctly */
   cursor: pointer;
   background-color: rgba(0, 0, 0, 0.5); /* Change this to your desired color and opacity */
   transition: color 0.3s;
