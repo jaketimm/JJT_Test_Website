@@ -67,15 +67,14 @@ for (const item of faqItems) {
 }
 
 
-function setHeight() {
-	const vh = window.innerHeight * 0.01; // Get 1% of the viewport height
-	document.documentElement.style.setProperty('--vh', `${vh}px`); // Set the CSS variable
-  }
-  
-  window.addEventListener('load', setHeight);
-  window.addEventListener('resize', setHeight);
+function setFullHeight() {
+	const homePage = document.querySelector('.home-page');
+	homePage.style.height = `${window.innerHeight}px`;
+}
 
-  
+// Set height on load
+window.addEventListener('load', setFullHeight);
+
 // Cycle the home page background image.
 const images = [
 	'images/20180815_100849.jpg',

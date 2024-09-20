@@ -113,15 +113,14 @@ body {
 <- Single Page Background image -->
 <--- -------------------------- -*/
 .home-page {
-  /* Initial image */
   background-image: url('images/20180815_100849.jpg');
   background-attachment: fixed;
-  background-size: cover; /* Ensure the image covers the background area */
-  background-position: center; /* Center the image */
-  width: 100vw; /* Scale image for smaller screens */
-  min-height: 100vh; /* Set height to full viewport height */
-  position: relative; /* Add position relative for the ::before pseudo-element */
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  position: relative;
 }
+
 
 .home-page::before {
   content: '';
