@@ -183,6 +183,7 @@ body {
 @media (orientation: landscape) and (max-width: 64rem) {
   .home-page {
     height: 1024px;
+    overflow: visible;
   }
 }
 
