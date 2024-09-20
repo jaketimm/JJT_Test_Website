@@ -119,7 +119,7 @@ body {
   background-size: cover; /* Ensure the image covers the background area */
   background-position: center; /* Center the image */
   width: 100vw; /* Scale image for smaller screens */
-  height: 100vh; /* Set height to full viewport height */
+  min-height: 100vh; /* Set height to full viewport height */
   position: relative; /* Add position relative for the ::before pseudo-element */
 }
 
