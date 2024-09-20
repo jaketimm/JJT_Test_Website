@@ -77,6 +77,12 @@ function setFullHeight() {
 
 // Set height on load
 window.addEventListener('load', setFullHeight);
+// Listen for orientation changes
+window.addEventListener('orientationchange', handleOrientationChange);
+
+function handleOrientationChange() {
+    setFullHeight();
+}
 
 // Cycle the home page background image.
 const images = [
