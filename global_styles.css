@@ -141,7 +141,7 @@ body {
 
 
 /* Tablet - 768px */
-@media only screen and (min-width: 37.5) {
+@media only screen and (min-width: 37.5rem) {
   .home-page {
     transition: background-image 1s ease-in-out; /* Adjust the duration and timing function as needed */
     background-image: url('images/20180815_100849.jpg'); /* set to destop version of first image */
