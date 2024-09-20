@@ -66,10 +66,13 @@ for (const item of faqItems) {
 	item.addEventListener('click', onClick)
 }
 
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////
+//                Include all code below here for homepage gallery background                      //
 /////////////////////////////////////////////////////////////////////////////////////////////////////
 // JS to move between images using arrow buttons on page. There is a transition fade b/t images
 // Cycle the home page background image.
+
+// Include all images to cycle
 const imagesDesktop = [
 	'images/20180815_100849.jpg',
 	'images/20180816_184505.jpg',
@@ -139,7 +142,7 @@ window.addEventListener('load', initialize);
 //////////////////////////////////////////////////////////
 // Preload the homepage background images that are initially hidden
 // After page finishes loading
-// Preload the homepage background images that are initially hidden
+
 document.addEventListener('DOMContentLoaded', () => {
     function preloadImages(images) {
         images.forEach((image) => {
@@ -148,13 +151,13 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Desktop images to preload
+    // Desktop images to preload (all images except the default one)
     const imagesDesktop = [
         'images/20180816_184505.jpg',
         'images/20180816_190002.jpg'
     ];
     
-    // Mobile images to preload
+    // Mobile images to preload (all images except the default one)
     const imagesMobile = [
         'images/20180816_184505 - m.jpg',
         'images/20180816_190002 - m.jpg'
