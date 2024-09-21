@@ -2817,7 +2817,7 @@ body {
   #cs-content-831 .cs-title-decorative::after {
     content: '';
     position: absolute;
-    background: var(--primary);
+    background: #fff8f8;
     /* Line color */
     height: 3px;
     /* Height of the line */
