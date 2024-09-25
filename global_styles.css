@@ -82,6 +82,10 @@ body {
   color: var(--bodyTextColor);
 }
 
+.bcw-color {
+  color: var(--bodyTextColorInverted);
+}
+
 
 
 /*-- -------------------------- -->
@@ -1891,36 +1895,6 @@ body {
     text-align: inherit;
     max-width: 43.75rem;
     position: relative;
-  }
-
-  #RPsbs-products .bcw-title::before {
-    content: '';
-    position: absolute;
-    background: var(--primary);
-    /* Line color */
-    width: 50px;
-    /* Width of the top line */
-    height: 3px;
-    /* Height of the top line */
-    right: 0;
-    /* Align to the right edge of the .bcw-title */
-    top: 10px;
-    /* Position at the top */
-  }
-
-  #RPsbs-products .bcw-title::after {
-    content: '';
-    position: absolute;
-    background: var(--primary);
-    /* Line color */
-    width: 30px;
-    /* Width of the bottom line */
-    height: 3px;
-    /* Height of the bottom line */
-    right: 20px;
-    /* Align to the right edge of the .bcw-title */
-    top: 18px;
-    /* Position slightly below the top line */
   }
 
   #RPsbs-products .bcw-button-solid {
