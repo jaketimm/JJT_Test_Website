@@ -1662,6 +1662,7 @@ body {
     /* 32px - 48px */
     color: var(--bodyTextColorInverted);
     align-items: center;
+    padding-bottom: 3%;
   }
 
   #faq-1109 .bcw-picture {
