@@ -59,7 +59,10 @@ window.addEventListener('resize', () => {
 // Set images on load
 window.addEventListener('load', initialize);
 
-// Preload the banner images that are initially hidden
+//////////////////////////////////////////////////////////
+// Preload the homepage background images that are initially hidden
+// After page finishes loading
+
 document.addEventListener('DOMContentLoaded', () => {
     function preloadImages(images) {
         images.forEach((image) => {
@@ -68,7 +71,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // Desktop images to preload (all images except the default one)
+    const imagesDesktop = [
+        'images/20180816_184505.jpg',
+        'images/20180816_190002.jpg'
+    ];
+    
+    // Mobile images to preload (all images except the default one)
+    const imagesMobile = [
+        'images/20180816_184505 - m.jpg',
+        'images/20180816_190002 - m.jpg'
+    ];
+    
+    // Function to set images based on screen size
+    function setImages() {
+        return (window.innerWidth < 650) ? imagesMobile : imagesDesktop; // Adjust the width as needed
+    }
+
     // Preload images based on the initial screen size
     const imagesToPreload = setImages();
     preloadImages(imagesToPreload);
+
+    // Optional: Add an event listener to handle window resize and preload again if needed
+    window.addEventListener('resize', () => {
+        preloadImages(setImages()); // Preload again if the size changes
+    });
 });
