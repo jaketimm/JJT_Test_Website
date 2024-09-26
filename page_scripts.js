@@ -49,6 +49,12 @@ function adjustSectionsOffset() {
 		topperSection.style.paddingTop = `${headerHeight}px`;
 	}
 
+	// Adjust Topper Section
+	const BannerSection = document.getElementById('Banner-Section');
+	if (BannerSection) {
+		BannerSection.style.paddingTop = `${headerHeight}px`;
+	}
+
 }
 
 // Attach event listeners 

@@ -5,13 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jake's Test Site - Casual</title>
-    <link rel="stylesheet" href="global_styles.css">
     <meta name="description" content="A Business Sandbox Website">
-    <meta name="robots" content="noindex, nofollow"> 
-    
+    <link rel="stylesheet" href="global_styles.css">
 </head>
 
-<body class="gallery-page">
+<body class="about-page">
 
     <!-- ============================================ -->
     <!--                Top Navigation                -->
@@ -42,12 +40,12 @@
                             </a>
                         </li>
                         <li class="bcw-li">
-                            <a href="alternate_home_page.html" class="bcw-li-link ">
+                            <a href="alternate_home_page.html" class="bcw-li-link bcw-active">
                                 Alt. Homepage
                             </a>
                         </li>
                         <li class="bcw-li">
-                            <a href="about_page.html" class="bcw-li-link">
+                            <a href="about_page.html" class="bcw-li-link ">
                                 About
                             </a>
                         </li>
@@ -57,7 +55,7 @@
                             </a>
                         </li>
                         <li class="bcw-li">
-                            <a href="gallery_page.html" class="bcw-li-link bcw-active">
+                            <a href="gallery_page.html" class="bcw-li-link">
                                 Video Gallery
                             </a>
                         </li>
@@ -78,31 +76,32 @@
 
     </header>
 
+    <main>
+        <!-- ============================================ -->
+        <!--             Fixed Banner at Top              -->
+        <!-- ============================================ -->
 
-    <!-- ============================================ -->
-    <!--             Embedded YT Players              -->
-    <!-- ============================================ -->
-    <section id="video_players">
-        <div class="bcw-container">
-            <div class="video-grid">
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+        <section id="Banner-Section">
+            <div class="banner">
+                <picture>
+                    <!-- Mobile image with width descriptor -->
+                    <source media="(max-width: 63.9375rem)" srcset="images/20180815_100849 - m.jpg">
+                    <!-- Desktop image -->
+                    <img src="images/20180815_100849.jpg" alt="Banner Image">
+                </picture>
+                <div class="control-bar">
+                    <button class="arrow left" onclick="prevImage()">&#10094;</button>
+                    <button class="arrow right" onclick="nextImage()">&#10095;</button>
                 </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/jfKfPfyJRdk?si=Lb6x_7jS_mQb79jl" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/jfKfPfyJRdk?si=Lb6x_7jS_mQb79jl" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
+                <div class="text-box">
+                    <span class="bcw-topper"> Mountain Hiking Society </span>
+                    <h1 class="bcw-title"> Explore the World With Exciting People </h1>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
+
+
     <!-- ============================================ -->
     <!--                  Footer                      -->
     <!-- ============================================ -->
@@ -169,6 +168,8 @@
 
     <!-- Link to gloabl Javascript file -->
     <script src="page_scripts.js"></script>
+
+    <script src="banner_gallery.js"></script>
 
 
 </body>
