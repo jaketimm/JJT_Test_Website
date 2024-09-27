@@ -5,11 +5,11 @@ const imagesDesktop = [
     'images/20180816_190002.jpg'
 ];
 
-// Cropped versions of images for 650px width or less
+// Cropped versions of images for 650px width or less, 600px height
 const imagesMobile = [
-    'images/20180815_100849-m.jpg',
-    'images/20180816_184505-m.jpg',
-    'images/20180816_190002-m.jpg'
+    'images/20180815_100849-m-short.jpg',
+    'images/20180816_184505-m-short.jpg',
+    'images/20180816_190002-m-short.jpg'
 ];
 
 let currentIndex = 0;
@@ -83,8 +83,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Mobile images to preload (all images except the default one)
     const imagesMobile = [
-        'images/20180816_184505-m.jpg',
-        'images/20180816_190002-m.jpg'
+        'images/20180816_184505-m-short.jpg',
+        'images/20180816_190002-m-short.jpg'
     ];
     
     // Function to set images based on screen size
