@@ -23,12 +23,15 @@ function setImages() {
 
 // Function to change the banner image 
 function changeBannerImage() {
-    const banner = document.querySelector('#Banner-Section .banner img');
-
-    setTimeout(() => {
-        banner.src = images[currentIndex]; // Change the image source
-    }, 200); // 200ms delay
+    const picture = document.getElementById('bannerPicture');
+    const sources = picture.getElementsByTagName('source');
+    if (sources.length > 0) {
+        const currentImage = images[currentIndex];
+        sources[0].srcset = currentImage; // Adjust as needed
+        picture.querySelector('img').src = currentImage; // Fallback
+    }
 }
+
 
 // Function to move to the next image
 function nextImage() {
@@ -92,8 +95,4 @@ document.addEventListener('DOMContentLoaded', () => {
     const imagesToPreload = setImages();
     preloadImages(imagesToPreload);
 
-    // Optional: Add an event listener to handle window resize and preload again if needed
-    window.addEventListener('resize', () => {
-        preloadImages(setImages()); // Preload again if the size changes
-    });
 });
