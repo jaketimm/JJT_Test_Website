@@ -65,6 +65,7 @@ window.addEventListener('load', initialize);
 //////////////////////////////////////////////////////////
 // Preload the homepage background images that are initially hidden
 // After page finishes loading
+let hasPreloaded = false;  //flag to make sure images can only be preloaded once
 
 document.addEventListener('DOMContentLoaded', () => {
     function preloadImages(images) {
@@ -93,6 +94,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Preload images based on the initial screen size
     const imagesToPreload = setImages();
-    preloadImages(imagesToPreload);
-
+    if (!hasPreloaded){
+        preloadImages(imagesToPreload);
+        hasPreloaded = true; // Set flag to true after preloading
+    }
+    
 });
