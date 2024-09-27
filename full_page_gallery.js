@@ -13,9 +13,9 @@ const imagesDesktop = [
 
 // cropped versions of images to use for 650px width of less
 const imagesMobile = [
-    'images/20180815_100849 - m.jpg',
-	'images/20180816_184505 - m.jpg',
-	'images/20180816_190002 - m.jpg'
+    'images/20180815_100849-m.jpg',
+	'images/20180816_184505-m.jpg',
+	'images/20180816_190002-m.jpg'
 ];
 
 let currentIndex = 0;
@@ -91,8 +91,8 @@ document.addEventListener('DOMContentLoaded', () => {
     
     // Mobile images to preload (all images except the default one)
     const imagesMobile = [
-        'images/20180816_184505 - m.jpg',
-        'images/20180816_190002 - m.jpg'
+        'images/20180816_184505-m.jpg',
+        'images/20180816_190002-m.jpg'
     ];
     
     // Function to set images based on screen size
