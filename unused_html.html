@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A Sandbox Website">
+    <title>Jake's Test Site - Casual</title>
+    <link rel="stylesheet" href="global_styles.css">
+</head>
+
+<body class="home-page">
+
+
+
+    <!-- full page background -->
+
+
+    <!-- ============================================ -->
+    <!--                Top Navigation                -->
+    <!-- ============================================ -->
+
+    <header id="bcw-navigation">
+        <div class="bcw-container">
+            <!--Nav Logo-->
+            <a href="index.html" class="bcw-logo" aria-label="back to home">
+                <img src="logo.jpg" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
+            </a>
+            <!--Navigation List-->
+            <nav class="bcw-nav" role="navigation">
+                <!--Mobile Nav Toggle-->
+                <button class="bcw-toggle" aria-label="mobile menu toggle">
+                    <span class="bcw-box" aria-hidden="true">
+                        <span class="bcw-line bcw-line1" aria-hidden="true"></span>
+                        <span class="bcw-line bcw-line2" aria-hidden="true"></span>
+                        <span class="bcw-line bcw-line3" aria-hidden="true"></span>
+                    </span>
+                </button>
+                <!-- We need a wrapper div so we can set a fixed height on the bcw-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the bcw-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+                <div class="bcw-ul-wrapper">
+                    <ul id="bcw-expanded" class="bcw-ul" aria-expanded="false">
+                        <li class="bcw-li">
+                            <a href="index.html" class="bcw-li-link bcw-active">
+                                Home
+                            </a>
+                        </li>
+                        <li class="bcw-li">
+                            <a href="alternate_home_page.html" class="bcw-li-link">
+                                Alt. Homepage
+                            </a>
+                        </li>
+                        <li class="bcw-li">
+                            <a href="about_page.html" class="bcw-li-link">
+                                About
+                            </a>
+                        </li>
+                        <li class="bcw-li">
+                            <a href="services_page.html" class="bcw-li-link">
+                                Services
+                            </a>
+                        </li>
+                        <li class="bcw-li">
+                            <a href="gallery_page.html" class="bcw-li-link">
+                                Video Gallery
+                            </a>
+                        </li>
+                        <li class="bcw-li">
+                            <a href="contact_page.html" class="bcw-li-link">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+            <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
+            <svg class="bcw-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+            <img class="bcw-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
+        </button> -->
+        </div>
+
+    </header>
+
+    <main>
+        <!-- ============================================ -->
+        <!--            Homepage Buttons and Text         -->
+        <!-- ============================================ -->
+
+        <section id="hero-229">
+            <div class="bcw-container">
+                <div class="bcw-flex-group">
+                    <span class="bcw-topper">mountain hiking society</span>
+                    <h1 class="bcw-title">Explore the World with Exciting People</h1>
+                    <p class="bcw-text">
+                        Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Nibh tortor id aliquet
+                        lectus
+                        proin nibh condimentum.
+                    </p>
+                    <a href="services_page.html" class="bcw-button-solid">Services</a>
+                    <a href="gallery_page.html" class="bcw-button-transparent">
+                        <img class="bcw-img" loading="lazy" decoding="async"
+                            src="https://csimg.nyc3.digitaloceanspaces.com/Hero/play.svg" alt="play icon" width="17"
+                            height="17">
+                        Gallery
+                    </a>
+                </div>
+            </div>
+
+        </section>
+
+        <div class="control-bar">
+            <button class="arrow left" onclick="prevImage()">&#10094;</button>
+            <button class="arrow right" onclick="nextImage()">&#10095;</button>
+        </div>
+
+    </main>
+
+    <!-- Link to gloabl Javascript file -->
+    <script src="page_scripts.js"></script>
+
+    <!-- Link to gallery Javascript file -->
+    <script src="full_page_gallery.js"></script>
+
+
+</body>
