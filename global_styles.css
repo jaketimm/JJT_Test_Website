@@ -3436,7 +3436,212 @@ body {
   #Wedding_Photos .spacer-2,
   #Corporate_Photos .spacer-3,
   #Graduation_Photos .spacer-4 {
-      height: 30px;
+      height: 100px;
       /* Adjust this value to increase/decrease space */
+  }
+}
+
+/*-- -------------------------- -->
+<---          Arrows            -->
+<--- -------------------------- -*/
+#SBS-Arrow-Advance .container {
+  display: flex;
+  flex-direction: column; /* Stack content and arrows vertically */
+  align-items: center;
+  width: 100%;
+  margin-bottom: 5%;
+  margin-top: 3%;
+}
+
+#SBS-Arrow-Advance .content {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+#SBS-Arrow-Advance .section {
+  width: 100%;
+  transition: opacity 0.5s;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#SBS-Arrow-Advance .section.active {
+  opacity: 1;
+  position: relative;
+}
+
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1%; /* Add spacing between testimonials and arrows */
+}
+
+#SBS-Arrow-Advance .arrow {
+  width: 50px;
+  height: 45px;
+  line-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: rgb(0, 0, 0);
+  font-size: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  outline: none; /* Prevent default outline on click */
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+  margin: 0 50%; /* Add space between the arrows */
+  background-color: #fff8f8;
+}
+
+/* Additional styles for better visual appearance */
+@media only screen and (max-width: 768px) {
+  #SBS-Arrow-Advance .arrow {
+      font-size: 40px;
+      height: 65px;
+      border: none;
+  }
+
+  #SBS-Arrow-Advance .arrow-container {
+      flex-direction: row; /* Ensure arrows are side by side on mobile */
+      margin-top: 10px; /* Adjust spacing for mobile */
+  }
+}
+
+
+
+
+/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+
+  #reviews-566 .cs-container {
+      width: 90%;
+      /* changes to 1280px at tablet */
+      max-width: 34.375rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+  }
+
+  #reviews-566 .cs-content {
+      /* Center content horizontally within its container */
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* Center horizontally within the container */
+      text-align: center;
+      /* Center text (if any) within the content */
+      width: 100%;
+      max-width: 32.625rem;
+      /* Limit the maximum width */
+      margin: 0 auto;
+      /* Center the entire element horizontally within its parent */
+  }
+
+
+  #reviews-566 .cs-item {
+      list-style: none;
+      width: 100%;
+      /* 32px - 60px top & bottom */
+      /* 16px - 48px left & right */
+      padding: clamp(2rem, 6.15vw, 3.75rem) clamp(1rem, 4.15vw, 3rem);
+      background-color: #d7d7d7;
+      /* prevents padding from adding to height and width */
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      position: relative;
+  }
+
+  #reviews-566 .cs-item-text {
+      /* 14px - 16px */
+      font-size: clamp(0.875rem, 1.5vw, 1rem);
+      line-height: 1.5em;
+      margin: 0;
+      /* 40px - 64px */
+      margin-bottom: clamp(2.5rem, 8vw, 4rem);
+      color: var(--bodyTextColorInverted);
+  }
+
+  #reviews-566 .cs-flex-group {
+      margin-top: auto;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      gap: 1.25rem;
+  }
+
+  #reviews-566 .cs-profile {
+      width: 5rem;
+      height: 5rem;
+      border-radius: 50%;
+      /* clips image corners to make circle */
+      overflow: hidden;
+      position: relative;
+      display: block;
+  }
+
+  #reviews-566 .cs-profile img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      /* makes the image behave like a background image */
+      object-fit: cover;
+  }
+
+  #reviews-566 .cs-name {
+      /* 16px - 20px */
+      font-size: clamp(1rem, 2vw, 1.25rem);
+      line-height: 1.5em;
+      font-weight: 700;
+      margin: 0 0 0.5rem 0;
+      color: var(--bodyTextColorInverted);
+      display: block;
+  }
+
+  #reviews-566 .cs-job {
+      /* 13px - 16px */
+      font-size: clamp(0.8125rem, 1.6vw, 1rem);
+      line-height: 1.2em;
+      font-weight: 400;
+      text-transform: uppercase;
+      letter-spacing: 0.01em;
+      margin: 0;
+      color: var(--bodyTextColorInverted);
+      display: block;
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48em) {
+
+  #reviews-566 {
+      padding: var(--sectionPadding);
+      padding-top: 0;
+  }
+
+  #reviews-566 .cs-container {
+      max-width: 80rem;
+  }
+
+  #reviews-566 .cs-card-group {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: stretch;
   }
 }
