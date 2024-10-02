@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jake's Test Site - Casual</title>
+    <link rel="stylesheet" href="global_styles.css">
+    <meta name="description" content="A Business Sandbox Website">
+    <meta name="robots" content="noindex, nofollow"> 
+    
+</head>
+
+<body class="gallery-page">
+
+    <!-- ============================================ -->
+    <!--                Top Navigation                -->
+    <!-- ============================================ -->
+
+    <header id="bcw-navigation">
+        <div class="bcw-container">
+            <!--Nav Logo-->
+            <a href="index.html" class="bcw-logo" aria-label="back to home">
+                <img src="logo.jpg" alt="logo" width="210" height="29" aria-hidden="true" decoding="async">
+            </a>
+            <!--Navigation List-->
+            <nav class="bcw-nav" role="navigation">
+                <!--Mobile Nav Toggle-->
+                <button class="bcw-toggle" aria-label="mobile menu toggle">
+                    <span class="bcw-box" aria-hidden="true">
+                        <span class="bcw-line bcw-line1" aria-hidden="true"></span>
+                        <span class="bcw-line bcw-line2" aria-hidden="true"></span>
+                        <span class="bcw-line bcw-line3" aria-hidden="true"></span>
+                    </span>
+                </button>
+                <!-- We need a wrapper div so we can set a fixed height on the bcw-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the bcw-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
+                <div class="bcw-ul-wrapper">
+                    <ul id="bcw-expanded" class="bcw-ul" aria-expanded="false">
+                        <li class="bcw-li">
+                            <a href="index.html" class="bcw-li-link">
+                                Home
+                            </a>
+                        </li>
+
+                        <li class="bcw-li">
+                            <a href="about_page.html" class="bcw-li-link">
+                                About
+                            </a>
+                        </li>
+                        <li class="bcw-li">
+                            <a href="services_page.html" class="bcw-li-link">
+                                Services
+                            </a>
+                        </li>
+                        <li class="bcw-li">
+                            <a href="gallery_page.html" class="bcw-li-link">
+                                Video Gallery
+                            </a>
+                        </li>
+                        <li class="bcw-li">
+                            <a href="gallery_page_photos.html" class="bcw-li-link bcw-active">
+                                Photo Gallery
+                            </a>
+                        </li>
+                        <li class="bcw-li">
+                            <a href="contact_page.html" class="bcw-li-link">
+                                Contact Us
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!--Dark Mode toggle, uncomment button code if you want to enable a dark mode toggle-->
+            <!-- <button id="dark-mode-toggle" aria-label="dark mode toggle">
+            <svg class="bcw-moon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480" style="enable-background:new 0 0 480 480" xml:space="preserve"><path d="M459.782 347.328c-4.288-5.28-11.488-7.232-17.824-4.96-17.76 6.368-37.024 9.632-57.312 9.632-97.056 0-176-78.976-176-176 0-58.4 28.832-112.768 77.12-145.472 5.472-3.712 8.096-10.4 6.624-16.832S285.638 2.4 279.078 1.44C271.59.352 264.134 0 256.646 0c-132.352 0-240 107.648-240 240s107.648 240 240 240c84 0 160.416-42.688 204.352-114.176 3.552-5.792 3.04-13.184-1.216-18.496z"/></svg>
+            <img class="bcw-sun" aria-hidden="true" src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons%2Fsun.svg" decoding="async" alt="moon" width="15" height="15">
+        </button> -->
+        </div>
+
+    </header>
+
+
+    <div id="Event_Photos">
+        <div class="spacer-1"></div>
+    </div>
+
+    <!-- ============================================ -->
+    <!--                 Title/Topper                 -->
+    <!-- ============================================ -->
+
+    <div id="cs-content-831">
+        <h2 class="cs-title">Event Photos</h2>
+    </div>
+
+
+    <!-- ============================================ -->
+    <!--                   Gallery                    -->
+    <!-- ============================================ -->
+
+    <section id="gallery-1446">
+        <div class="cs-container">
+            <!--<div class="cs-content">
+                <div class="cs-flex">
+                    <span class="cs-topper">Gallery</span>
+                    <h2 class="cs-title">Our Photo Gallery</h2>
+                </div>
+            </div>-->
+            <!--Gallery-->
+            <div class="cs-gallery">
+                <!--Picture 1-->
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)"
+                        srcset="images/pexels-fox-58267-225157.jpg">
+                    <source media="(min-width: 601px)"
+                        srcset="images/pexels-fox-58267-225157.jpg">
+                    <img loading="lazy" decoding="async"
+                        src="images/pexels-fox-58267-225157.jpg" alt="gallery"
+                        width="305" height="400">
+                </picture>
+                <!--Picture 2-->
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)"
+                        srcset="images/pexels-hikaique-243757.jpg">
+                    <source media="(min-width: 601px)"
+                        srcset="images/pexels-hikaique-243757.jpg">
+                    <img loading="lazy" decoding="async"
+                        src="images/pexels-hikaique-243757.jpg"
+                        alt="gallery" width="305" height="400">
+                </picture>
+                <!--Picture 3-->
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)"
+                        srcset="images/pexels-jibarofoto-1500590.jpg">
+                    <source media="(min-width: 601px)"
+                        srcset="images/pexels-jibarofoto-1500590.jpg">
+                    <img loading="lazy" decoding="async"
+                        src="images/pexels-jibarofoto-1500590.jpg" alt="gallery"
+                        width="305" height="400">
+                </picture>
+                <!--Picture 4-->
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)"
+                        srcset="images/pexels-indeedsaeed-827209.jpg">
+                    <source media="(min-width: 601px)"
+                        srcset="images/pexels-indeedsaeed-827209.jpg">
+                    <img loading="lazy" decoding="async"
+                        src="images/pexels-indeedsaeed-827209.jpg" alt="gallery"
+                        width="305" height="400">
+                </picture>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="Wedding_Photos">
+        <div class="spacer-2"></div>
+    </div>
+
+    <!-- ============================================ -->
+    <!--                 Title/Topper                 -->
+    <!-- ============================================ -->
+
+    <div id="cs-content-831">
+        <h2 class="cs-title">Wedding Photos</h2>
+    </div>
+
+
+    <!-- ============================================ -->
+    <!--                   Gallery                    -->
+    <!-- ============================================ -->
+
+    <section id="gallery-1446">
+        <div class="cs-container">
+            <!--<div class="cs-content">
+                <div class="cs-flex">
+                    <span class="cs-topper">Gallery</span>
+                    <h2 class="cs-title">Our Photo Gallery</h2>
+                </div>
+            </div>-->
+            <!--Gallery-->
+            <div class="cs-gallery">
+                <!--Picture 1-->
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)"
+                        srcset="images/pexels-fox-58267-225157.jpg">
+                    <source media="(min-width: 601px)"
+                        srcset="images/pexels-fox-58267-225157.jpg">
+                    <img loading="lazy" decoding="async"
+                        src="images/pexels-fox-58267-225157.jpg" alt="gallery"
+                        width="305" height="400">
+                </picture>
+                <!--Picture 2-->
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)"
+                        srcset="images/pexels-hikaique-243757.jpg">
+                    <source media="(min-width: 601px)"
+                        srcset="images/pexels-hikaique-243757.jpg">
+                    <img loading="lazy" decoding="async"
+                        src="images/pexels-hikaique-243757.jpg"
+                        alt="gallery" width="305" height="400">
+                </picture>
+                <!--Picture 3-->
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)"
+                        srcset="images/pexels-jibarofoto-1500590.jpg">
+                    <source media="(min-width: 601px)"
+                        srcset="images/pexels-jibarofoto-1500590.jpg">
+                    <img loading="lazy" decoding="async"
+                        src="images/pexels-jibarofoto-1500590.jpg" alt="gallery"
+                        width="305" height="400">
+                </picture>
+                <!--Picture 4-->
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)"
+                        srcset="images/pexels-indeedsaeed-827209.jpg">
+                    <source media="(min-width: 601px)"
+                        srcset="images/pexels-indeedsaeed-827209.jpg">
+                    <img loading="lazy" decoding="async"
+                        src="images/pexels-indeedsaeed-827209.jpg" alt="gallery"
+                        width="305" height="400">
+                </picture>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="Corporate_Photos">
+        <div class="spacer-3"></div>
+    </div>
+
+    <!-- ============================================ -->
+    <!--                 Title/Topper                 -->
+    <!-- ============================================ -->
+
+    <div id="cs-content-831">
+        <h2 class="cs-title">Corporate Photos</h2>
+    </div>
+
+
+    <!-- ============================================ -->
+    <!--                   Gallery                    -->
+    <!-- ============================================ -->
+
+    <section id="gallery-1446">
+        <div class="cs-container">
+            <!--<div class="cs-content">
+                <div class="cs-flex">
+                    <span class="cs-topper">Gallery</span>
+                    <h2 class="cs-title">Our Photo Gallery</h2>
+                </div>
+            </div>-->
+            <!--Gallery-->
+            <div class="cs-gallery">
+                <!--Picture 1-->
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)"
+                        srcset="images/pexels-fox-58267-225157.jpg">
+                    <source media="(min-width: 601px)"
+                        srcset="images/pexels-fox-58267-225157.jpg">
+                    <img loading="lazy" decoding="async"
+                        src="images/pexels-fox-58267-225157.jpg" alt="gallery"
+                        width="305" height="400">
+                </picture>
+                <!--Picture 2-->
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)"
+                        srcset="images/pexels-hikaique-243757.jpg">
+                    <source media="(min-width: 601px)"
+                        srcset="images/pexels-hikaique-243757.jpg">
+                    <img loading="lazy" decoding="async"
+                        src="images/pexels-hikaique-243757.jpg"
+                        alt="gallery" width="305" height="400">
+                </picture>
+                <!--Picture 3-->
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)"
+                        srcset="images/pexels-jibarofoto-1500590.jpg">
+                    <source media="(min-width: 601px)"
+                        srcset="images/pexels-jibarofoto-1500590.jpg">
+                    <img loading="lazy" decoding="async"
+                        src="images/pexels-jibarofoto-1500590.jpg" alt="gallery"
+                        width="305" height="400">
+                </picture>
+                <!--Picture 4-->
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)"
+                        srcset="images/pexels-indeedsaeed-827209.jpg">
+                    <source media="(min-width: 601px)"
+                        srcset="images/pexels-indeedsaeed-827209.jpg">
+                    <img loading="lazy" decoding="async"
+                        src="images/pexels-indeedsaeed-827209.jpg" alt="gallery"
+                        width="305" height="400">
+                </picture>
+            </div>
+        </div>
+    </section>
+
+
+    <div id="Graduation_Photos">
+        <div class="spacer-4"></div>
+    </div>
+
+    <!-- ============================================ -->
+    <!--                 Title/Topper                 -->
+    <!-- ============================================ -->
+
+    <div id="cs-content-831">
+        <h2 class="cs-title">Graduation Photos</h2>
+    </div>
+
+
+    <!-- ============================================ -->
+    <!--                   Gallery                    -->
+    <!-- ============================================ -->
+
+    <section id="gallery-1446">
+        <div class="cs-container">
+            <!--<div class="cs-content">
+                <div class="cs-flex">
+                    <span class="cs-topper">Gallery</span>
+                    <h2 class="cs-title">Our Photo Gallery</h2>
+                </div>
+            </div>-->
+            <!--Gallery-->
+            <div class="cs-gallery">
+                <!--Picture 1-->
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)"
+                        srcset="images/pexels-fox-58267-225157.jpg">
+                    <source media="(min-width: 601px)"
+                        srcset="images/pexels-fox-58267-225157.jpg">
+                    <img loading="lazy" decoding="async"
+                        src="images/pexels-fox-58267-225157.jpg" alt="gallery"
+                        width="305" height="400">
+                </picture>
+                <!--Picture 2-->
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)"
+                        srcset="images/pexels-hikaique-243757.jpg">
+                    <source media="(min-width: 601px)"
+                        srcset="images/pexels-hikaique-243757.jpg">
+                    <img loading="lazy" decoding="async"
+                        src="images/pexels-hikaique-243757.jpg"
+                        alt="gallery" width="305" height="400">
+                </picture>
+                <!--Picture 3-->
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)"
+                        srcset="images/pexels-jibarofoto-1500590.jpg">
+                    <source media="(min-width: 601px)"
+                        srcset="images/pexels-jibarofoto-1500590.jpg">
+                    <img loading="lazy" decoding="async"
+                        src="images/pexels-jibarofoto-1500590.jpg" alt="gallery"
+                        width="305" height="400">
+                </picture>
+                <!--Picture 4-->
+                <picture class="cs-image">
+                    <source media="(max-width: 600px)"
+                        srcset="images/pexels-indeedsaeed-827209.jpg">
+                    <source media="(min-width: 601px)"
+                        srcset="images/pexels-indeedsaeed-827209.jpg">
+                    <img loading="lazy" decoding="async"
+                        src="images/pexels-indeedsaeed-827209.jpg" alt="gallery"
+                        width="305" height="400">
+                </picture>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                  Footer                      -->
+    <!-- ============================================ -->
+
+    <footer id="footer-1390">
+        <div class="bcw-container">
+            <div class="bcw-top">
+                <ul class="bcw-ul">
+                    <li class="bcw-li">
+                        <a href="index.html" class="bcw-link">Home</a>
+                    </li>
+                    <li class="bcw-li">
+                        <a href="about_page.html" class="bcw-link">About</a>
+                    </li>
+                    <li class="bcw-li">
+                        <a href="services_page.html" class="bcw-link">Services</a>
+                    </li>
+                    <li class="bcw-li">
+                        <a href="gallery_page.html" class="bcw-link">Gallery</a>
+                    </li>
+                    <li class="bcw-li">
+                        <a href="contact_page.html" class="bcw-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="bcw-bottom">
+                <!--Social-->
+                <ul class="bcw-social">
+                    <li class="bcw-social-li">
+                        <a href="" class="bcw-social-link" aria-label="facebook" target="_blank" rel="noopener">
+                            <img class="bcw-social-icon bcw-default"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/facebook-ba.svg" alt="icon"
+                                loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
+                        </a>
+                    </li>
+                    <li class="bcw-social-li">
+                        <a href="" class="bcw-social-link" aria-label="twitter" target="_blank" rel="noopener">
+                            <img class="bcw-social-icon bcw-default"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/twitter-ba.svg" alt="icon"
+                                loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
+                        </a>
+                    </li>
+                    <li class="bcw-social-li">
+                        <a href="" class="bcw-social-link" aria-label="instagram" target="_blank" rel="noopener">
+                            <img class="bcw-social-icon bcw-default"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/instagram-ba.svg" alt="icon"
+                                loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
+                        </a>
+                    </li>
+                    <li class="bcw-social-li">
+                        <a href="" class="bcw-social-link" aria-label="twitter" target="_blank" rel="noopener">
+                            <img class="bcw-social-icon bcw-default"
+                                src="https://csimg.nyc3.cdn.digitaloceanspaces.com/Icons/youtube-ba.svg" alt="icon"
+                                loading="lazy" decoding="async" width="12" height="12" aria-hidden="true">
+                        </a>
+                    </li>
+                </ul>
+                <span class="bcw-copyright">
+                    © Copyright 2024 - <a href="" class="bcw-copyright-link">Stitch Agency</a>
+                </span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to gloabl Javascript file -->
+    <script src="page_scripts.js"></script>
+
+
+</body>
