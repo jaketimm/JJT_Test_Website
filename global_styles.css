@@ -1956,21 +1956,20 @@ body {
     border: 1px solid #000000;
     position: relative;
     display: block;
-    /* width divided by height */
-    aspect-ratio: 1.5;
-    /* prevents border from adding to height and width */
+    aspect-ratio: 1.5; /* width divided by height */
     box-sizing: border-box;
-  }
+}
 
-
-  #RPsbs-products .bcw-picture img {
+#RPsbs-products .bcw-picture img {
     position: absolute;
     top: 0;
     left: 0;
     height: 100%;
     width: 100%;
     object-fit: cover;
-  }
+    z-index: 1; /* Ensure the image is above the colored box */
+}
+
 }
 
 /* Tablet - 768px */
@@ -2003,13 +2002,30 @@ body {
     flex: none;
   }
 
-
   #RPsbs-products .bcw-content {
     max-width: 33.875rem;
     margin: 0;
     width: 45%;
   }
 }
+
+
+/* Offset colored box behind image */
+@media only screen and (min-width: 850px) {
+
+  #RPsbs-products .bcw-picture::before {
+    content: '';
+    position: absolute;
+    top: 0; /* Start from the center */
+    right: 0; /* Position on the right side */
+    height: 100%; /* Same height as the image */
+    width: 100%; /* Same width as the image */
+    background-color: var(--primary); /* Adjust color as needed */
+    transform: translate(10%, -20%);
+    z-index: 0; /* Make sure it's behind the image */
+  }
+}
+
 
 /*-- -------------------------- -->
 <---         Services           -->
@@ -2370,7 +2386,7 @@ body {
     align-items: stretch;
   }
   #pricing-1690 .bcw-item.bcw-popular {
-    background-color: #000000;
+    background-color: var(--primary);
   }
   #pricing-1690 .bcw-item.bcw-popular .bcw-package,
   #pricing-1690 .bcw-item.bcw-popular .bcw-li,
@@ -2499,25 +2515,19 @@ body {
 
   #services-690 .bcw-container {
       width: 100%;
-      /* changes to 1280px at tablet */
       max-width: 34.375rem;
       margin: auto;
       display: flex;
       flex-direction: column;
       align-items: center;
-      /* 48px - 64px */
       gap: clamp(3rem, 6vw, 4rem);
-      border-bottom: solid 2px var(--primary);
   }
 
   #services-690 .bcw-content {
-      /* set text align to left if content needs to be left aligned */
       text-align: left;
-      /* Adjust width based on size of titles */
       width: 60%;
       display: flex;
       flex-direction: column;
-      /* centers content horizontally, set to flex-start to left align */
       align-items: flex-start;
   }
 
@@ -2529,9 +2539,7 @@ body {
   #services-690 .bcw-text a {
       color: var(--linkcolor);
       text-decoration: none;
-      /* Remove underline */
       font-weight: bold;
-      /* Make text bold */
   }
 
   #services-690 .bcw-card-group {
@@ -2549,17 +2557,17 @@ body {
   #services-690 .bcw-item {
       list-style: none;
       width: 100%;
-      /* 24px - 40px top & bottom */
       padding: clamp(1.25rem, 4vw, 2.5rem) 1.5rem;
       box-sizing: border-box;
       transition:
           background-color 0.3s,
           transform 0.3s,
           box-shadow 0.3s;
-      max-height: 400px;
-
+      background-color:  #d7d7d7;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; /* Align children to take full height */
   }
-
 
   #services-690 .bcw-link {
       text-decoration: none;
@@ -2578,18 +2586,14 @@ body {
       justify-content: center;
       align-items: center;
       border-radius: 50%;
-      background-color: #fff;
-      box-shadow: 0px 12px 30px rgba(26, 26, 26, 0.04);
+      background-color: #d7d7d7;
       position: relative;
       z-index: 1;
-      border: 2px solid black;
-      /* Adjust the width and color as needed */
   }
 
   #services-690 .bcw-icon {
       height: 2rem;
       width: auto;
-
   }
 
   #services-690 .bcw-h3 {
@@ -2599,66 +2603,57 @@ body {
       line-height: 1.2em;
       margin: 0;
       margin-bottom: 0.75rem;
-      color: var(--bodyTextColorInverted);
+      color: var(--primary);
       transition: color 0.3s;
   }
 
   #services-690 .bcw-item-text {
-      /* 14px - 16px */
       font-size: clamp(0.875rem, 1.5vw, 1rem);
       text-align: center;
       line-height: 1.5em;
       margin: 0;
       color: var(--bodyTextColorInverted);
       transition: color 0.3s;
+      flex-grow: 1; /* Allow text to grow and fill space */
   }
 
   #services-690 .bcw-title {
       display: inline-block;
       position: relative;
-      color: var(--primary);
-      /*padding-left: 10px; /* Adjusted padding for better alignment */
+      color: var(--bodyTextColorInverted);
       margin-bottom: 0;
+      padding-bottom: 5%;
       text-align: center;
-      /* Ensures text is left-aligned */
   }
 
   #services-690 .bcw-flex-group {
       flex: none;
       display: flex;
-      /* Ensures items inside are aligned properly if needed */
       flex-direction: column;
-      /* Align items in a vertical column */
   }
 
   #services-690 .bcw-title::before {
       content: "";
       position: absolute;
       left: 0;
-      /* Ensures the vertical line is aligned to the left edge */
       top: 0;
       bottom: 0;
       width: 3px;
-      /* Width of the vertical line */
-      /*background-color: #fff8f8; /* Line color */
   }
 
   #services-690 .bcw-title-second-line {
-      color: var(--primary);
+      color: var(--bodyTextColorInverted);
       font-size: var(--headerFontSize);
       font-weight: 900;
       line-height: 1.2em;
       max-width: 43.75rem;
-      /* Ensures text does not exceed this width */
       position: relative;
       text-align: center;
-      /* Ensures text is left-aligned */
   }
-
 }
 
 /* Tablet - 768px */
-@media only screen and (min-width: 760px) {
+@media only screen and (min-width: 771px) {
   #services-690 .bcw-container {
       max-width: 80rem;
   }
@@ -2671,14 +2666,11 @@ body {
       width: 75%;
   }
 
-
-
   #services-690 .bcw-flex-group {
       width: 50%;
   }
 
   #services-690 .bcw-card-group {
-      /* pushes down the same amount the 2nd cards are translated down to maintain the even spacing at the bottom of the bcw-card-group */
       margin-bottom: 2.5rem;
       flex-direction: row;
       justify-content: center;
@@ -2689,21 +2681,19 @@ body {
   #services-690 .bcw-item {
       width: 30vw;
       max-width: 25.8125rem;
+      height: 360px; /* Ensure consistent height */
   }
-
 }
 
 /* Mobile */
-@media only screen and (max-width: 759px) {
-
+@media only screen and (max-width: 770px) {
   #services-690 .bcw-item {
-      max-height: 400px;
+      height: 270px; /* Ensure consistent height */
   }
 
   #services-690 .bcw-content {
       align-items: center;
       width: 100%;
-      /* Takes up full width of its container */
   }
 
   #services-690 .bcw-flex-group {
@@ -2713,7 +2703,6 @@ body {
   #services-690 .bcw-title-second-line {
       margin-bottom: 5%;
   }
-
 }
 
 /*-- -------------------------- -->
@@ -3644,4 +3633,213 @@ body {
       justify-content: space-between;
       align-items: stretch;
   }
+}
+
+/*-- -------------------------- -->
+<---          Reviews           -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #reviews-355 {
+      padding: var(--sectionPadding);
+  }
+  #reviews-355 .cs-container {
+      width: 100%;
+      max-width: 90rem;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+  }
+  #reviews-355 .cs-content {
+      /* set text align to left if content needs to be left aligned */
+      text-align: center;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      /* centers content horizontally, set to flex-start to left align */
+      align-items: center;
+  }
+
+  #reviews-355 .cs-card-group {
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      /* 16px - 20px */
+      gap: clamp(1rem, 2.5vw, 1.15rem);
+  }
+  #reviews-355 .cs-item {
+      list-style: none;
+      width: 100%;
+      max-width: 39.375rem;
+      margin: 0;
+      /* 24px - 32px top & bottom */
+      /* 16px - 40px left & right */
+      padding: clamp(1.5rem, 3.15vw, 2rem) clamp(1rem, 3.15vw, 2.5rem);
+      background-color: #d7d7d7;
+      border-radius: 1rem;
+      /* prevents padding from adding to height and width */
+      box-sizing: border-box;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      flex-direction: column;
+      position: relative;
+  }
+  #reviews-355 .cs-quote {
+      width: 2.5rem;
+      height: auto;
+      margin-bottom: 2rem;
+      display: block;
+  }
+  #reviews-355 .cs-review {
+      /* 14px - 20px */
+      font-size: clamp(0.875rem, 2vw, 1.25rem);
+      line-height: 1.5em;
+      margin: 0;
+      /* 20px - 40px */
+      margin-bottom: clamp(1.25rem, 3vw, 2.5rem);
+      color: var(--bodyTextColorInverted);
+  }
+  #reviews-355 .cs-name {
+      /* 20px - 25px */
+      font-size: clamp(1.25rem, 3vw, 1.5625rem);
+      line-height: 1.2em;
+      font-weight: 700;
+      margin: 0;
+      /* in case one card has more text than the other, this pushes up against the review text so the name and title are always at the bottom. Only works if parent is a flexbox */
+      margin-top: auto;
+      color: var(--headerColor);
+      display: block;
+  }
+  #reviews-355 .cs-job {
+      /* 14px - 16px */
+      font-size: clamp(0.875rem, 1.6vw, 1rem);
+      line-height: 1.5em;
+      margin: 0;
+      color: var(--bodyTextColorInverted);
+      display: block;
+  }
+}
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+  #reviews-355 .cs-card-group {
+      flex-direction: row;
+      justify-content: center;
+      align-items: stretch;
+      flex-wrap: wrap;
+  }
+  #reviews-355 .cs-item {
+      width: clamp(31.5%, 30vw, 32.3%);
+  }
+}
+
+/*-- -------------------------- -->
+<---   Contact Bottom Banner    -->
+<--- -------------------------- -*/
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+  #cta-51 {
+
+    padding: var(--sectionPadding);
+    position: relative;
+    /*background-color: #fff8f8;*/
+    bottom: -2px;
+    /* Adjust to control the overlap (Need this so there is not gap between sections i.e. line*/
+  }
+
+  #cta-51 .cs-container {
+    border-top: solid 2px var(--primary);
+    width: 100%;
+    max-width: 80rem;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 64px */
+    gap: clamp(3rem, 6vw, 4rem);
+
+  }
+
+  /* Mobile-specific styles */
+  @media (max-width: 600px) {
+    #cta-51 .cs-container {
+      margin-bottom: 10vh;
+    }
+
+  }
+
+  #cta-51 .cs-content {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+
+  #cta-51 .cs-topper {
+    color: var(--bodyTextColorInverted);
+    padding-top: 2%;
+  }
+
+  #cta-51 .cs-title {
+    color: var(--bodyTextColorInverted);
+  }
+
+  #cta-51 .cs-text {
+    margin-bottom: 1rem;
+    color: var(--bodyTextColorInverted);
+    opacity: 0.8;
+  }
+
+  #cta-51 .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+
+  #cta-51 .cs-button-solid {
+    font-size: 1rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+    margin: 0;
+    color: #fff;
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    background-color: var(--primary);
+    border-radius: 0.25rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+
+  #cta-51 .cs-button-solid:before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 0%;
+    background: #000000;
+    opacity: 1;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    border-radius: 0.25rem;
+    transition: width 0.3s;
+  }
+
+  #cta-51 .cs-button-solid:hover:before {
+    width: 100%;
+  }
+
 }
