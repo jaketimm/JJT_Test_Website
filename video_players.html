@@ -11,6 +11,7 @@
 
 <body class="about-page">
 
+
     <!-- ============================================ -->
     <!--                Top Navigation                -->
     <!-- ============================================ -->
@@ -40,12 +41,12 @@
                             </a>
                         </li>
                         <li class="bcw-li">
-                            <a href="video_players.html" class="bcw-li-link ">
+                            <a href="video_players.html" class="bcw-li-link bcw-active">
                                 Video Background Page
                             </a>
                         </li>
                         <li class="bcw-li">
-                            <a href="about_page.html" class="bcw-li-link bcw-active">
+                            <a href="about_page.html" class="bcw-li-link ">
                                 About
                             </a>
                         </li>
@@ -82,106 +83,81 @@
     </header>
 
     <main>
-        
+
         <!-- ============================================ -->
-        <!--              About Us Side by Side           -->
+        <!--             Background video                 -->
         <!-- ============================================ -->
-        <section id="RPsbs-products">
-            <div class="bcw-container">
-                <!-- Left Content Section-->
-                <div class="bcw-content">
-                    <h2 class="bcw-title">Who <span class = "bcw-color"> We Are </span></h2>
-                    <p class="bcw-text">
-                        Here at Company Name, We believe ....Tincidunt lobortis feugiat vivamus at augue eget arcu
-                        dictum
-                        varius. Nibh tortor id aliquet lectus
-                        proin nibh condimentum.Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Nibh
-                        tortor id aliquet lectus
-                        proin nibh condimentum.Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Nibh
-                        tortor id aliquet lectus
-                    </p>
-                    <a class="bcw-button-solid" aria-label="See our work" href="services_page.html"> See Our Work </a>
+        <section id="background-video">
+            <div class="cs-container">
+                <video id="video" autoplay loop muted poster="https://assets.codepen.io/6093409/river.jpg">
+                    <source src="https://assets.codepen.io/6093409/river.mp4" type="video/mp4">
+                </video>
+                <div class="text-box">
+                    <span class="bcw-topper"> Mountain Hiking Society </span>
+                    <h1 class="bcw-title"> Explore the World With Exciting People </h1>
                 </div>
-                <!-- Right Image Section -->
-                <picture class="bcw-picture">
-                    <source media="(max-width: 600px)" srcset="images/pexels-brunomassao-2170450.jpg">
-                    <source media="(min-width: 601px)" srcset="images/pexels-brunomassao-2170450.jpg">
-                    <img decoding="async" src="images/pexels-brunomassao-2170450.jpg" alt="hiker" width="434"
-                        height="434" aria-hidden="true">
-                </picture>
-            </div>
-        </section>
-
-        <!-- ============================================ -->
-        <!--                 Title/Topper                 -->
-        <!-- ============================================ -->
-
-        <div id="cs-content-831">
-            <h2 class="cs-title">Our Team</h2>
-        </div>
-
-        <!-- ============================================ -->
-        <!--                      Bio                     -->
-        <!-- ============================================ -->
-        <section id="RPsbs-bio1">
-            <div class="bcw-container">
-                <!-- Image Section -->
-                <picture class="bcw-picture">
-                    <source media="(max-width: 600px)" srcset="images/pexels-brunomassao-2170450.jpg">
-                    <source media="(min-width: 601px)" srcset="images/pexels-brunomassao-2170450.jpg">
-                    <img decoding="async" src="images/pexels-brunomassao-2170450.jpg" alt="hiker" width="434"
-                        height="434" aria-hidden="true">
-                </picture>
-                <!-- Content Section-->
-                <div class="bcw-content">
-                    <h3 class="bcw-topper"> John Doe </h3>
-                    <p class="bcw-text">
-                        Tincidunt lobortis feugiat vivamus at augue eget arcu
-                        dictum
-                        varius. Nibh tortor id aliquet lectus
-                        proin nibh condimentum.Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Nibh
-                        tortor id aliquet lectus
-                        proin nibh condimentum.Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Nibh
-                        tortor id aliquet lectus
-
-                    </p>
-                </div>
-                
             </div>
         </section>
 
 
         <!-- ============================================ -->
-        <!--                     Bio                      -->
+        <!--                   Reviews                    -->
         <!-- ============================================ -->
-        <section id="RPsbs-bio2">
-            <div class="bcw-container">
-                <!-- Image Section -->
-                <picture class="bcw-picture">
-                    <source media="(max-width: 600px)" srcset="images/pexels-brunomassao-2170450.jpg">
-                    <source media="(min-width: 601px)" srcset="images/pexels-brunomassao-2170450.jpg">
-                    <img decoding="async" src="images/pexels-brunomassao-2170450.jpg" alt="hiker" width="434"
-                        height="434" aria-hidden="true">
-                </picture>
-                <!-- Content Section-->
-                <div class="bcw-content">
-                    <h3 class="bcw-topper"> Jane Doe </h3>
-                    <p class="bcw-text">
-                        Tincidunt lobortis feugiat vivamus at augue eget arcu
-                        dictum
-                        varius. Nibh tortor id aliquet lectus
-                        proin nibh condimentum.Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Nibh
-                        tortor id aliquet lectus
-                        proin nibh condimentum.Tincidunt lobortis feugiat vivamus at augue eget arcu dictum varius. Nibh
-                        tortor id aliquet lectus
-                    </p>
+
+        <section id="reviews-355">
+            <div class="cs-container">
+                <div class="cs-content">
+                    <span class="cs-topper">Testimonials</span>
+                    <h2 class="cs-title">Trusted by Thousand of People & Companies</h2>
                 </div>
-                
+                <ul class="cs-card-group">
+                    <li class="cs-item">
+                        <img class="cs-quote" aria-hidden="true" src="svg/quote-right-svgrepo-com.svg" decoding="async"
+                            alt="quote icon" width="40" height="33">
+                        <p class="cs-review">
+                            I have used CleanPro service for about four years. I describe myself very picky and
+                            difficult to be pleased. Exceeded my expectations.
+                        </p>
+                        <span class="cs-name">John Doe</span>
+                        <span class="cs-job">Chief Executive</span>
+                    </li>
+                    <li class="cs-item">
+                        <img class="cs-quote" aria-hidden="true" src="svg/quote-right-svgrepo-com.svg" decoding="async"
+                            alt="quote icon" width="40" height="33">
+                        <p class="cs-review">
+                            I have used CleanPro service for about four years. I describe myself very picky and
+                            difficult to be pleased. Exceeded my expectations.
+                        </p>
+                        <span class="cs-name">Robert Henrich</span>
+                        <span class="cs-job">CEO, HK Traders</span>
+                    </li>
+                    <li class="cs-item">
+                        <img class="cs-quote" aria-hidden="true" src="svg/quote-right-svgrepo-com.svg" decoding="async"
+                            alt="quote icon" width="40" height="33">
+                        <p class="cs-review">
+                            I have used CleanPro service for about four years. I describe myself very picky and
+                            difficult to be pleased. Exceeded my expectations.
+                        </p>
+                        <span class="cs-name">Robert Henrich</span>
+                        <span class="cs-job">CEO, HK Traders</span>
+                    </li>
+                </ul>
             </div>
         </section>
 
-
-
+        <!-- ============================================ -->
+        <!--                Contact Banner                -->
+        <!-- ============================================ -->
+        <section id="cta-51">
+            <div class="cs-container">
+                <div class="cs-content">
+                    <div class="decorative-line"></div>
+                    <span class="cs-topper">Contact Us</span>
+                    <h2 class="cs-title">Questions? Get in Touch Today</h2>
+                    <a href="contact_page.html" class="cs-button-solid">Get A Free Quote</a>
+                </div>
+            </div>
+        </section>
     </main>
 
 
