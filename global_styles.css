@@ -3985,7 +3985,8 @@ body {
 /*-- -------------------------- -->
 <---    Background video        -->
 <--- -------------------------- -*/
-/* Mobile - 360px */
+/* Note, ideal video aspect ratio is 1.67 -->
+ to fit screen without losing the video edges */
 @media only screen and (min-width: 0rem) {
   #background-video {
     padding-top: 60px;
@@ -4058,8 +4059,7 @@ body {
     /* Include padding in width/height */
 
   }
-  
-  
+
   #background-video .bcw-title {
     font-size: var(--headerFontSize);
     font-weight: 900;
@@ -4073,7 +4073,7 @@ body {
     /* Retain your color */
     position: relative;
   }
-  
+
   #background-video .bcw-topper {
     font-size: var(--topperFontSize);
     font-weight: 700;
@@ -4086,6 +4086,24 @@ body {
     color: #fff;
     /* Retain your color */
     position: relative;
+  }
+
+  /* Tablet - 768px */
+  @media only screen and (max-width: 760px) {
+
+    #background-video .text-box {
+      width: 95%;
+      height: auto;
+    }
+  }
+
+  /* Desktop - 768px */
+  @media only screen and (min-width: 1100px) {
+
+    #background-video #video {
+      width: 100vw;
+      height: 95vh;
+    }
   }
 
 
