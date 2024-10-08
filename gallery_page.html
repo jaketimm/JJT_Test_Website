@@ -8,17 +8,15 @@
     <link rel="stylesheet" href="global_styles.css">
     <meta name="description" content="A Business Sandbox Website">
     <meta name="robots" content="noindex, nofollow">
-    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet"/>
+    <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet" />
+    <script src="https://vjs.zencdn.net/7.14.3/video.js"></script>
     <style>
         #embedded-video-player {
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh; /* Full viewport height for centering */
-        }
-
-        #embedded-video-player .container {
-            width: 80%; /* Adjust as needed */
+            height: 100vh;
+            /* Full viewport height for centering */
         }
     </style>
 </head>
@@ -96,12 +94,23 @@
     </header>
 
     <section id="embedded-video-player">
-        <div class="container">
-            <video id="video" class="video-js vjs-default-skin" controls preload="auto" width="640" height="360">
-                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-            </video>
-        </div>
+        <video id="my-video" class="video-js vjs-default-skin" controls preload="auto" width="640" height="360">
+            <source src="my-video.mp4" type="video/mp4" />
+            <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a web browser that
+                <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+            </p>
+        </video>
     </section>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var player = videojs('my-video', {
+                controls: true,
+                fluid: true
+            });
+        });
+    </script>
 
 
     <!-- ============================================ -->
@@ -188,7 +197,7 @@
 
     <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
+        document.addEventListener('DOMContentLoaded', function () {
             const player = videojs('video');
         });
     </script>
