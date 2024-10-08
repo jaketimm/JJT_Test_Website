@@ -246,6 +246,7 @@ body {
 
 /*-- -------------------------- -->
 <-          YT Players          -->
+<-      And custom players      -->
 <--- -------------------------- -*/
 @media only screen and (min-width: 0rem) {
   #video_players {
@@ -1967,6 +1968,7 @@ body {
     margin-bottom: 2rem;
   }
 
+  /* Picture with colored box background */
   #RPsbs-products .bcw-picture {
     width: 100%;
     max-width: 27.125rem;
@@ -1979,7 +1981,21 @@ body {
     box-sizing: border-box;
   }
 
-  #RPsbs-products .bcw-picture img {
+  /* Picture with no colored box background */
+  #RPsbs-products .bcw-picture-no-bg {
+    width: 100%;
+    max-width: 27.125rem;
+    margin: 0;
+    border: 1px solid #000000;
+    position: relative;
+    display: block;
+    aspect-ratio: 1.5;
+    /* width divided by height */
+    box-sizing: border-box;
+  }
+
+  #RPsbs-products .bcw-picture img,
+  #RPsbs-products .bcw-picture-no-bg img {
     position: absolute;
     top: 0;
     left: 0;
@@ -1993,7 +2009,7 @@ body {
 }
 
 /* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
+@media only screen and (min-width: 800px) {
 
 
   #RPsbs-products .bcw-container {
@@ -3985,7 +4001,7 @@ body {
 /*-- -------------------------- -->
 <---    Background video        -->
 <--- -------------------------- -*/
-/* Note, ideal video aspect ratio is 1.67 -->
+/* Note, ideal video aspect ratio is 16:9 -->
  to fit screen without losing the video edges */
 @media only screen and (min-width: 0rem) {
   #background-video {
@@ -4106,5 +4122,23 @@ body {
     }
   }
 
-
 }
+
+
+/*-- -------------------------- -->
+<---      Embedded video        -->
+<--- -------------------------- -*/
+/* Note, ideal video aspect ratio is 16:9 -->
+ to fit screen without losing the video edges */
+#embedded-video-player {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full viewport height for centering */
+}
+
+#embedded-video-player .container {
+  height: auto;
+  width: 80%; /* Adjust as needed */
+}
+

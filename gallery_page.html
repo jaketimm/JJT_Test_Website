@@ -7,8 +7,8 @@
     <title>Jake's Test Site - Casual</title>
     <link rel="stylesheet" href="global_styles.css">
     <meta name="description" content="A Business Sandbox Website">
-    <meta name="robots" content="noindex, nofollow"> 
-    
+    <meta name="robots" content="noindex, nofollow">
+    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
 </head>
 
 <body class="gallery-page">
@@ -82,6 +82,21 @@
         </div>
 
     </header>
+
+    <section id="embedded-video-player">
+        <div class="container">
+            <video id="video" class="video-js vjs-default-skin" controls preload="auto" width="640" height="360">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            </video>
+        </div>
+    </section>
+
+    <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const player = videojs('video');
+        });
+    </script>
 
 
     <!-- ============================================ -->
