@@ -8,17 +8,9 @@
     <link rel="stylesheet" href="global_styles.css">
     <meta name="description" content="A Business Sandbox Website">
     <meta name="robots" content="noindex, nofollow">
+    <!-- Video JS scripts-->
     <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet" />
     <script src="https://vjs.zencdn.net/7.14.3/video.js"></script>
-    <style>
-        #embedded-video-player {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            /* Full viewport height for centering */
-        }
-    </style>
 </head>
 
 <body class="gallery-page">
@@ -93,22 +85,60 @@
 
     </header>
 
-    <section id="embedded-video-player">
-        <video id="my-video" class="video-js vjs-default-skin" controls preload="auto" width="640" height="360">
-            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-            <p class="vjs-no-js">
-                To view this video please enable JavaScript, and consider upgrading to a web browser that
-                <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-            </p>
-        </video>
+    <section id="embedded-video-player1" class="video-container">
+        <div>
+            <video id="my-video" class="video-js vjs-default-skin" controls preload="auto" width="640" height="360">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a web browser that
+                    <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+            </video>
+        </div>
     </section>
+    
+    <section id="embedded-video-player2" class="video-container">
+        <div>
+            <video id="my-video" class="video-js vjs-default-skin" controls preload="auto" width="640" height="360">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a web browser that
+                    <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+            </video>
+        </div>
+    </section>
+    
+    <section id="embedded-video-player3" class="video-container">
+        <div>
+            <video id="my-video" class="video-js vjs-default-skin" controls preload="auto" width="640" height="360">
+                <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                <p class="vjs-no-js">
+                    To view this video please enable JavaScript, and consider upgrading to a web browser that
+                    <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+                </p>
+            </video>
+        </div>
+    </section>
+    
 
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            var player = videojs('my-video', {
+            var player = videojs('my-video1', {
                 controls: true,
                 fluid: true
             });
+
+            var player2 = videojs('my-video2', {
+                controls: true,
+                fluid: true
+            });
+
+            var player3 = videojs('my-video3', {
+                controls: true,
+                fluid: true
+            });
+
         });
     </script>
 
@@ -116,7 +146,7 @@
     <!-- ============================================ -->
     <!--             Embedded YT Players              -->
     <!-- ============================================ -->
-     
+
     <!--<section id="video_players">
         <div class="bcw-container">
             <div class="video-grid">
