@@ -4161,7 +4161,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 700px) {
   .video-container {
     height: 50vh; /* Full viewport height for centering */
     margin-bottom: 15%;
