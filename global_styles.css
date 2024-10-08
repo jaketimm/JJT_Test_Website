@@ -4124,21 +4124,3 @@ body {
 
 }
 
-
-/*-- -------------------------- -->
-<---      Embedded video        -->
-<--- -------------------------- -*/
-/* Note, ideal video aspect ratio is 16:9 -->
- to fit screen without losing the video edges */
-#embedded-video-player {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Full viewport height for centering */
-}
-
-#embedded-video-player .container {
-  height: auto;
-  width: 80%; /* Adjust as needed */
-}
-

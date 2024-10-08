@@ -8,7 +8,19 @@
     <link rel="stylesheet" href="global_styles.css">
     <meta name="description" content="A Business Sandbox Website">
     <meta name="robots" content="noindex, nofollow">
-    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet" />
+    <link href="https://vjs.zencdn.net/7.20.3/video-js.css" rel="stylesheet"/>
+    <style>
+        #embedded-video-player {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full viewport height for centering */
+        }
+
+        #embedded-video-player .container {
+            width: 80%; /* Adjust as needed */
+        }
+    </style>
 </head>
 
 <body class="gallery-page">
@@ -93,7 +105,7 @@
 
     <script src="https://vjs.zencdn.net/7.20.3/video.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function () {
+        document.addEventListener('DOMContentLoaded', function() {
             const player = videojs('video');
         });
     </script>
@@ -107,16 +119,6 @@
             <div class="video-grid">
                 <div class="video-container">
                     <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/jfKfPfyJRdk?si=Lb6x_7jS_mQb79jl" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                        allowfullscreen></iframe>
-                </div>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/jfKfPfyJRdk?si=Lb6x_7jS_mQb79jl" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                         allowfullscreen></iframe>
                 </div>
