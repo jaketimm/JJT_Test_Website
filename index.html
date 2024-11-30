@@ -178,8 +178,7 @@
                 </div>
                 <ul class="cs-card-group">
                     <li class="cs-item">
-                        <img class="cs-quote" aria-hidden="true"
-                            src="svg/quote-right-svgrepo-com.svg" decoding="async"
+                        <img class="cs-quote" aria-hidden="true" src="svg/quote-right-svgrepo-com.svg" decoding="async"
                             alt="quote icon" width="40" height="33">
                         <p class="cs-review">
                             I have used CleanPro service for about four years. I describe myself very picky and
@@ -189,8 +188,7 @@
                         <span class="cs-job">Chief Executive</span>
                     </li>
                     <li class="cs-item">
-                        <img class="cs-quote" aria-hidden="true"
-                            src="svg/quote-right-svgrepo-com.svg" decoding="async"
+                        <img class="cs-quote" aria-hidden="true" src="svg/quote-right-svgrepo-com.svg" decoding="async"
                             alt="quote icon" width="40" height="33">
                         <p class="cs-review">
                             I have used CleanPro service for about four years. I describe myself very picky and
@@ -200,8 +198,7 @@
                         <span class="cs-job">CEO, HK Traders</span>
                     </li>
                     <li class="cs-item">
-                        <img class="cs-quote" aria-hidden="true"
-                            src="svg/quote-right-svgrepo-com.svg" decoding="async"
+                        <img class="cs-quote" aria-hidden="true" src="svg/quote-right-svgrepo-com.svg" decoding="async"
                             alt="quote icon" width="40" height="33">
                         <p class="cs-review">
                             I have used CleanPro service for about four years. I describe myself very picky and
@@ -214,11 +211,37 @@
             </div>
         </section>
 
-        <div class="widget-container">
-            <div class='sk-ww-facebook-profile' data-embed-id='25493981'></div><script src='https://widgets.sociablekit.com/facebook-profile/widget.js' defer></script>
-        </div>
+        <!-- ============================================ -->
+        <!--                Facebook Widget               -->
+        <!-- ============================================ -->
+        <div class="widget-container" id="widget-container"></div>
 
-    
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var widgetContainer = document.getElementById('widget-container');
+
+                // Create the Facebook profile widget
+                var widgetDiv = document.createElement('div');
+                widgetDiv.className = 'sk-ww-facebook-profile';
+                widgetDiv.setAttribute('data-embed-id', '25493981');
+
+                // Append the widget to the container
+                widgetContainer.appendChild(widgetDiv);
+
+                // Create the script tag to load the widget script
+                var scriptTag = document.createElement('script');
+                scriptTag.src = 'https://widgets.sociablekit.com/facebook-profile/widget.js';
+                scriptTag.defer = true;
+
+                // Append the script tag to the container
+                document.body.appendChild(scriptTag);
+            });
+        </script>
+
+
+        <!--<div class="widget-container">
+            <div class='sk-ww-facebook-profile' data-embed-id='25493981'></div><script src='https://widgets.sociablekit.com/facebook-profile/widget.js' defer></script>
+        </div>-->
 
     </main>
 
