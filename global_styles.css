@@ -3343,7 +3343,7 @@ body {
 
 
 /*-- -------------------------- -->
-<---   Products Side By Side   -->
+<---    Bio Side By Side        -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
@@ -4194,4 +4194,351 @@ body {
     max-width: 800px; /* Max width for larger screens */
     height: 750px; /* Largest player height */
   }
+}
+
+
+/* -- -------------------------- */
+/* ---      Embedded videos      */
+/* --- -------------------------- */
+
+@media only screen and (min-width: 0rem) {
+  .video-container {
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    align-items: center;
+    height: 450px; /* Largest player height */
+    max-width: 320px; /* 50% width on small screens */
+    text-align: center; /* Center text in this div */
+    margin: 0 auto; /* Center the container */
+  }
+
+  .video-container video {
+    width: 100%; /* Full width of the div */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 3%;
+  }
+
+  .video-description {
+    color: var(--bodyTextColor); /* Text color */
+    padding: 10px; /* Padding inside the box */
+    padding-top: 0;
+    font-size: 1.5rem;
+    width: 100%;
+    line-height: 1.5rem;
+  }
+
+
+}
+
+@media only screen and (min-width: 700px) {
+  .video-container {
+    max-width: 640px; /* Max width for larger screens */
+    height: 550px; /* Largest player height */
+  }
+
+}
+
+@media only screen and (min-width: 1400px) {
+  .video-container {
+    max-width: 800px; /* Max width for larger screens */
+    height: 650px; /* Largest player height */
+  }
+}
+
+
+/*-- -------------------------- -->
+<---          Arrows            -->
+<--- -------------------------- -*/
+#SBS-Arrow-Advance .container {
+  display: flex;
+  flex-direction: column; /* Stack content and arrows vertically */
+  align-items: center;
+  width: 100%;
+  padding: var(--sectionPadding);
+  padding-top: 0;
+  padding-bottom: 0;
+  margin-bottom: 5%;
+
+}
+
+#SBS-Arrow-Advance .content {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+}
+
+#SBS-Arrow-Advance .section {
+  width: 100%;
+  transition: opacity 0.5s;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#SBS-Arrow-Advance .section.active {
+  opacity: 1;
+  position: relative;
+  z-index: 10; /* Make sure active section is on top */
+}
+
+.arrow-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1%; /* Add spacing between testimonials and arrows */
+}
+
+.arrow-item {
+  text-align: center; /* Center the text under the arrows */
+  margin: 0 1rem; /* Spacing between the arrow items */
+}
+
+.arrow-text {
+  font-size: 1rem; /* Adjust font size as needed */
+  color: var(--bodyTextColor); /* Change color to match your theme */
+}
+
+#SBS-Arrow-Advance .arrow {
+  width: 50px;
+  height: 45px;
+  line-height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  color: var(--bodyTextColor);
+  background-color: var(--secondary);
+  font-size: 50px;
+  cursor: pointer;
+  outline: none; /* Prevent default outline on click */
+  -webkit-tap-highlight-color: transparent; /* Remove tap highlight on mobile */
+  margin: 0 3rem; /* Add horizontal space between the arrows */
+}
+
+/* Additional styles for better visual appearance */
+@media only screen and (max-width: 768px) {
+  #SBS-Arrow-Advance .arrow {
+      font-size: 35px;
+      height: 65px;
+      border: none;
+  }
+
+  #SBS-Arrow-Advance .arrow-container {
+      flex-direction: row; /* Ensure arrows are side by side on mobile */
+      margin-top: 10px; /* Adjust spacing for mobile */
+  }
+}
+/*-- -------------------------- -->
+<---       Packages SBS         -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+
+  #sbs-packages {
+    padding: 0 1em;
+    position: relative;
+    z-index: 1;
+    background-color: var(--secondary);
+    padding-top: 5%;
+  }
+
+  #sbs-packages .cs-text {
+    color: var(--bodyTextColor)
+  }
+
+  #sbs-packages .cs-container {
+    width: 100%;
+    /* changes to 1280px on tablet */
+    max-width: 34.375rem;
+    padding: var(--sectionPadding);
+    margin: auto;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* 48px - 108px */
+    gap: clamp(3rem, 8vw, 6.75rem);
+    position: relative;
+    border: solid 1px var(--bodyTextColor);
+  }
+
+  #sbs-packages .cs-content,
+  #sbs-packages .cs-content2 {
+    /* set text align to left if content needs to be left aligned */
+    text-align: center;
+    /* changes at tablet */
+    max-width: 27.125rem;
+    display: flex;
+    flex-direction: column;
+    /* centers content horizontally, set to flex-start to left align */
+    align-items: center;
+  }
+
+  #sbs-packages .cs-content {
+    width: 95%;
+  }
+
+
+  #sbs-packages .cs-title {
+    max-width: 20ch;
+    color: var(--bodyTextColor);
+    margin-bottom: 0;
+  }
+
+  #sbs-packages ul {
+    align-items: center;
+    padding: 0;
+  }
+
+  #sbs-packages .cs-text {
+    margin-bottom: 1rem;
+
+  }
+
+  #sbs-packages .cs-text:last-of-type {
+    margin-bottom: 2rem;
+  }
+
+  #sbs-packages .cs-price {
+    font-size: 1.5rem;
+    /* 46px - 56px */
+    line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+    text-decoration: none;
+    font-weight: 500;
+    text-align: center;
+    margin: 0;
+    color: var(--bodyTextColor);
+    border: 1px solid var(--bodyTextColor);
+    min-width: 9.375rem;
+    padding: 0 1.5rem;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    /* prevents padding from adding to the width */
+    box-sizing: border-box;
+  }
+
+  #sbs-packages .cs-picture,
+  #sbs-packages .cs-picture1,
+  #sbs-packages .cs-picture2 {
+    width: 100%;
+    max-width: 27.125rem;
+    margin: 0;
+    position: relative;
+    display: block;
+    /* width divided by height */
+    aspect-ratio: 1.5;
+    /* prevents border from adding to height and width */
+    box-sizing: border-box;
+  }
+
+  #sbs-packages .cs-picture {
+    border: solid 4px var(--bodyTextColor);
+    border-bottom: solid 16px var(--bodyTextColor)
+  }
+
+  #sbs-packages .cs-picture1,
+  #sbs-packages .cs-picture2 {
+    margin-top: 3%;
+    margin-bottom: 3%;
+    aspect-ratio: .67;
+    width: 50%;
+  }
+
+  #sbs-packages .cs-picture2 {
+    aspect-ratio: 1.5;
+  }
+
+  #sbs-packages .cs-picture img,
+  #sbs-packages .cs-picture1 img,
+  #sbs-packages .cs-picture2 img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+
+  #sbs-packages .cs-background {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    /* makes it act like a background image */
+    object-fit: cover;
+    opacity: .2;
+  }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 767px) {
+
+  #sbs-packages .cs-container {
+    max-width: 80rem;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  #sbs-packages .cs-picture {
+    /* 344px - 434px */
+    width: clamp(21.5rem, 37.5vw, 27.125rem);
+    flex: none;
+  }
+
+
+  #sbs-packages .cs-picture {
+    /* 344px - 434px */
+    width: 50%;
+    flex: none;
+  }
+
+  #sbs-packages .cs-content,
+  #sbs-packages .cs-content2 {
+    max-width: 33.875rem;
+    margin: 0;
+    width: 45%;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  #sbs-packages .cs-content2 {
+    width: 30%;
+  }
+
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 1000px) {
+
+  #sbs-packages .cs-content2 {
+    max-width: 25%;
+    margin: 0;
+
+  }
+
+}
+
+
+.widget-container {
+  width: 100%; /* You can set a specific width, or 100% to take up the full container width */
+  max-width: 500px; /* Optional: Limits the container to a max width, e.g., 500px */
+  margin: 0 auto; /* Centers the container horizontally */
+  padding: 20px; /* Adds padding around the widget inside the container */
+  background-color: #f9f9f9; /* Optional: Adds a background color */
+  border-radius: 8px; /* Optional: Adds rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a soft shadow around the container */
+}
+
+.sk-ww-facebook-profile {
+  width: 100%; /* The widget will take up the full width of the container */
+  box-sizing: border-box; /* Includes padding and border in width calculation */
 }

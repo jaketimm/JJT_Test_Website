@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Tester</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            transition: background-color 0.5s, color 0.5s;
+        }
+        input {
+            margin: 10px;
+            padding: 10px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="lorem-text">Lorem ipsum odor amet, consectetuer adipiscing elit. Imperdiet metus libero, aenean porta taciti ornare etiam turpis. Mollis consectetur et, blandit habitasse quis dapibus. Sagittis nisl commodo vestibulum eros condimentum in euismod diam feugiat. Senectus nam rhoncus in a potenti. Posuere cursus sit congue ridiculus sem pellentesque parturient massa cursus.</h1>
+        <input type="text" id="bgColor" placeholder="Background Color (Hex)">
+        <input type="text" id="textColor" placeholder="Text Color (Hex)">
+        <button onclick="changeColors()">Change Colors</button>
+    </div>
+
+    <script>
+        function changeColors() {
+            const bgColor = document.getElementById('bgColor').value;
+            const textColor = document.getElementById('textColor').value;
+            document.body.style.backgroundColor = bgColor;
+            document.body.style.color = textColor;
+        }
+    </script>
+</body>
+</html>

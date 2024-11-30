@@ -10,7 +10,6 @@
     <meta name="robots" content="noindex, nofollow">
     <!-- Video JS scripts-->
     <link href="https://vjs.zencdn.net/7.14.3/video-js.css" rel="stylesheet" />
-    <script src="https://vjs.zencdn.net/7.14.3/video.js"></script>
 </head>
 
 <body class="gallery-page">
@@ -156,7 +155,7 @@
     <!--             Embedded YT Players              -->
     <!-- ============================================ -->
 
-    <!--<section id="video_players">
+    <section id="video_players">
         <div class="bcw-container">
             <div class="video-grid">
                 <div class="video-container">
@@ -166,7 +165,133 @@
                 </div>
             </div>
         </div>
-    </section>-->
+    </section>
+
+     <!-- ============================================ -->
+        <!--                Featured Videos               -->
+        <!-- ============================================ -->
+        <section id="SBS-Arrow-Advance">
+            <div class="container">
+                <div class="content">
+                    <!-- First Section Displayed on Page Load -->
+                    <div class="section active" id="section1">
+                        <section id="embedded-video-player1">
+                            <div class="video-container">
+                                <video id="my-video1" class="video-js vjs-default-skin" controls preload="auto"
+                                    width="640" height="360">
+                                    <source
+                                        src="https://videos.pexels.com/video-files/1918465/1918465-uhd_2560_1440_24fps.mp4"
+                                        type="video/mp4">
+                                    <p class="vjs-no-js">
+                                        To view this video please enable JavaScript, and consider upgrading to a web
+                                        browser that
+                                        <a href="https://videojs.com/html5-video-support/" target="_blank">supports
+                                            HTML5 video</a>
+                                    </p>
+                                </video>
+                                <div class="video-description">
+                                    <span class="cs-color">Name & Name</span> &bull; Location
+                                </div>
+                                <div class="video-description">
+                                    <span class="cs-text">Lorem ipsum odor amet, consectetuer adipiscing elit. Vitae
+                                        montes conubia tortor eleifend
+                                        iaculis. Aliquet ullamcorper lobortis maecenas amet nibh tempus.
+                                </div>
+                        </section>
+                    </div>
+                    <!-- Second Section -->
+                    <div class="section" id="section2">
+                        <section id="embedded-video-player2">
+                            <div class="video-container">
+                                <video id="my-video2" class="video-js vjs-default-skin" controls preload="auto"
+                                    width="640" height="360">
+                                    <source
+                                        src="https://videos.pexels.com/video-files/1531418/1531418-hd_1920_1080_25fps.mp4"
+                                        type="video/mp4">
+                                    <p class="vjs-no-js">
+                                        To view this video please enable JavaScript, and consider upgrading to a web
+                                        browser that
+                                        <a href="https://videojs.com/html5-video-support/" target="_blank">supports
+                                            HTML5 video</a>
+                                    </p>
+                                </video>
+                                <div class="video-description">
+                                    <span class="cs-color">Name & Name</span> &bull; Location
+                                </div>
+                                <div class="video-description">
+                                    <span class="cs-text">Lorem ipsum odor amet, consectetuer adipiscing elit. Vitae
+                                        montes conubia tortor eleifend
+                                        iaculis. Aliquet ullamcorper lobortis maecenas amet nibh tempus.
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <!-- Third Section -->
+                    <div class="section" id="section3">
+                        <section id="embedded-video-player3">
+                            <div class="video-container">
+                                <video id="my-video3" class="video-js vjs-default-skin" controls preload="auto"
+                                    width="640" height="360">
+                                    <source
+                                        src="https://videos.pexels.com/video-files/3115738/3115738-uhd_2560_1440_24fps.mp4"
+                                        type="video/mp4">
+                                    <p class="vjs-no-js">
+                                        To view this video please enable JavaScript, and consider upgrading to a web
+                                        browser that
+                                        <a href="https://videojs.com/html5-video-support/" target="_blank">supports
+                                            HTML5 video</a>
+                                    </p>
+                                </video>
+                                <div class="video-description">
+                                    <span class="cs-color"> Name & Name</span> &bull; Location
+                                </div>
+                                <div class="video-description">
+                                    <span class="cs-text">Lorem ipsum odor amet, consectetuer adipiscing elit. Vitae
+                                        montes conubia tortor eleifend
+                                        iaculis. Aliquet ullamcorper lobortis maecenas amet nibh tempus.
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <!-- Container for arrows -->
+                <div class="arrow-container">
+                    <div class="arrow-item">
+                        <button class="arrow" id="prev">&#8592;</button>
+                        <p class="arrow-text">Prev.</p> <!-- Text under the left arrow -->
+                    </div>
+                    <div class="arrow-item">
+                        <button class="arrow" id="next">&#8594;</button>
+                        <p class="arrow-text">Next</p> <!-- Text under the right arrow -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- scripts needed to load and play videos -->
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+
+                src = "https://vjs.zencdn.net/7.14.3/video.js" //load videoJS library after page load
+
+                var player1 = videojs('my-video1', {
+                    controls: true,
+                    fluid: true
+                });
+
+                var player2 = videojs('my-video2', {
+                    controls: true,
+                    fluid: true
+                });
+
+                var player3 = videojs('my-video3', {
+                    controls: true,
+                    fluid: true
+                });
+
+            });
+
+        </script>
 
     <!-- ============================================ -->
     <!--                  Footer                      -->
@@ -234,6 +359,9 @@
 
     <!-- Link to gloabl Javascript file -->
     <script src="page_scripts.js"></script>
+
+    <!-- Link to gloabl Javascript file -->
+    <script src="video_advance.js"></script>
 
 
 </body>
