@@ -1,5 +1,5 @@
 
-document.addEventListener('DOMContentLoaded', function () {
+window.onload = function() {
     var widgetContainer = document.getElementById('widget-container');
 
     // Create the Facebook profile widget
@@ -17,5 +17,5 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Append the script tag to the container
     document.body.appendChild(scriptTag);
-});
+};
 
