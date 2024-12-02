@@ -15,8 +15,8 @@ collections:
     fields:
       - label: "Title"
         name: "title"
-        default: "Update"
-        disabled: true  # Or make it disabled in the front-end
+        default: "Updates"
+        widget: "hidden"  # This field won't be visible or editable in the UI
       - label: "Body"
         name: "body"
         widget: "markdown"
