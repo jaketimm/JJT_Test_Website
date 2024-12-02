@@ -7,6 +7,8 @@
     <title>Jake's Test Site - Casual</title>
     <meta name="description" content="A Business Sandbox Website">
     <link rel="stylesheet" href="global_styles.css">
+    <!-- Add this for Decap CMS -->
+    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
 <body class="about-page">
@@ -295,6 +297,20 @@
     <script src="banner_gallery.js"></script>
 
     <!--<script src="widget_scripts.js"></script>-->
+
+    <!-- Script needed for Decap CMS -->
+    <script>
+        if (window.netlifyIdentity) {
+            window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                        document.location.href = "/admin/";
+                    });
+                }
+            });
+        }
+    </script>
+
 
 
 </body>
