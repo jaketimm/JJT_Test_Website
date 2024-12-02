@@ -4562,6 +4562,6 @@ body {
 
 @media only screen and (min-width: 500px) {
   .update-banner{
-    padding-top: 90px; /* Avoid content getting covered by the banner */
+    padding-top: 100px; /* Avoid content getting covered by the banner */
   }
 }
