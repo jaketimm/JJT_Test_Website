@@ -85,6 +85,11 @@
 
     <main>
 
+        <!-- Update Banner Section, content injected by updates_banner.JS -->
+         <div id="update-banner" class="update-banner">
+            <div id="update-content" class="update-content"></div>
+        </div>
+
         <!-- ============================================ -->
         <!--             Fixed Banner at Top              -->
         <!-- ============================================ -->
@@ -296,7 +301,6 @@
 
     <script src="banner_gallery.js"></script>
 
-    <!--<script src="widget_scripts.js"></script>-->
 
     <!-- Script needed for Decap CMS -->
     <script>
@@ -311,6 +315,11 @@
         }
     </script>
 
+    <!-- Script needed for rendering Markdown -->
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+     <!-- Link to gloabl Javascript file -->
+     <script src="updates_banner.JS"></script>
 
 
 </body>
