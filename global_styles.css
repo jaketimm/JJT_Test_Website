@@ -4548,12 +4548,23 @@ body {
   justify-content: center;
   align-items: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding-top: 75px; /* Avoid content getting covered by the banner */
 }
 
 
 /* Main content below the banner */
 .update-content {
-  
   padding-bottom: 20px;
+}
+
+@media only screen and (min-width: 0px) {
+  .update-banner{
+    padding-top: 75px; /* Avoid content getting covered by the banner */
+  }
+}
+
+
+@media only screen and (min-width: 0px) {
+  .update-banner{
+    padding-top: 125px; /* Avoid content getting covered by the banner */
+  }
 }

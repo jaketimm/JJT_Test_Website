@@ -17,9 +17,17 @@ async function loadMarkdown() {
         // Remove the YAML frontmatter (everything before and including the first '---')
         const contentMatch = markdown.replace(/^---.*?---/s, '').trim(); // Remove the frontmatter block
 
-        // Convert markdown links to HTML anchor tags, and remove other markdown syntax
+        // Convert markdown links to HTML anchor tags, and convert bold and italic markdown to HTML
         const htmlContent = contentMatch
-            .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>') // Convert markdown links to anchor tags
+            .replace(/\[(.*?)\]\((.*?)\)/g, (match, text, url) => {
+                // Ensure the URL starts with 'http' or 'https'
+                if (!/^https?:\/\//.test(url)) {
+                    url = 'https://' + url; // Default to 'https://'
+                }
+                return `<a href="${url}" target="_blank">${text}</a>`; // Create a proper <a> tag
+            })
+            .replace(/\*\*([^\*]+)\*\*/g, '<strong>$1</strong>') // Convert bold markdown to <strong> tags
+            .replace(/_(.*?)_/g, '<em>$1</em>') // Convert italic markdown to <em> tags
 
         // Get the update-banner and update-content elements
         const updateBanner = document.getElementById('update-banner');
