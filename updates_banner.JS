@@ -3,6 +3,17 @@ async function loadMarkdown() {
     try {
         // Fetch the markdown file (adjust the path if needed)
         const response = await fetch('CMS/updates.md');
+
+         // Check if the fetch was successful (response.status 200)
+         if (!response.ok) {
+            if (response.status === 404) {
+                console.log('Markdown file not found (404).');
+            } else {
+                console.log(`Error fetching the markdown file: ${response.status} ${response.statusText}`);
+            }
+            return; // Exit if the file can't be fetched
+        }
+        
         const markdown = await response.text();
 
         // Check if the fetch was successful (response.status 200)
