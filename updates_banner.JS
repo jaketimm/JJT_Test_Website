@@ -5,6 +5,12 @@ async function loadMarkdown() {
         const response = await fetch('CMS/updates.md');
         const markdown = await response.text();
 
+        // Check if the fetch was successful (response.status 200)
+        if (!response.ok) {
+            console.log('Error: Markdown file not found or unable to fetch.');
+            return; // Exit if the file can't be fetched (e.g., file does not exist)
+        }
+
         // Check if the markdown content is empty
         if (!markdown.trim()) {
             console.log('No content available in the markdown file.');
