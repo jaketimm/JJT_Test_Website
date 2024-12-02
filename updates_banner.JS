@@ -19,10 +19,7 @@ async function loadMarkdown() {
 
         // Convert markdown links to HTML anchor tags, and remove other markdown syntax
         const htmlContent = contentMatch
-            .replace(/\[([^\]]+)\]\(<([^>]+)>\)/g, '<a href="$2">$1</a>') // Convert markdown links to anchor tags
-            .replace(/\*\*([^\*]+)\*\*/g, '$1') // Remove bold markdown syntax
-            .replace(/_(.*?)_/g, '$1') // Remove italic markdown syntax
-            .replace(/#+\s*(.*)/g, '$1'); // Remove headers (optional, if you want plain text)
+            .replace(/\[(.*?)\]\((.*?)\)/g, '<a href="$2" target="_blank">$1</a>') // Convert markdown links to anchor tags
 
         // Get the update-banner and update-content elements
         const updateBanner = document.getElementById('update-banner');
