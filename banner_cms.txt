@@ -1,0 +1,6 @@
+A guide to configure the neflify project online to allow CMS and Decap:
+https://arshsharma.com/posts/2023-11-15-building-a-blog-with-a-cms-using-hugo-and-netlify/
+
+1. Copy the Admin and CMS folders in
+2. Copy the id="update-banner" class="update-banner" HTML (on index page) and CSS in
+3. Copy the updates_banner.JS and marked.JS file paths into the index page.
