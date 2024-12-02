@@ -4553,18 +4553,18 @@ body {
 /* Style anchor tags inside the .update-banner container */
 .update-banner a {
   color: black;        /* Make anchor text black */
-  font-style: bold;  /* Make anchor text italicized */
+  font-weight: 1000;  /* Make anchor text italicized */
   text-decoration: none; /* Optional: Remove underline from links */
 }
 
 @media only screen and (min-width: 0px) {
   .update-banner{
-    padding-top: 70px; /* Avoid content getting covered by the banner */
+    padding-top: 75px; /* Avoid content getting covered by the banner */
   }
 }
 
 @media only screen and (min-width: 500px) {
   .update-banner{
-    padding-top: 100px; /* Avoid content getting covered by the banner */
+    padding-top: 110px; /* Avoid content getting covered by the banner */
   }
 }
