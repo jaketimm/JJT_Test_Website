@@ -13,14 +13,8 @@ async function loadMarkdown() {
             }
             return; // Exit if the file can't be fetched
         }
-        
-        const markdown = await response.text();
 
-        // Check if the fetch was successful (response.status 200)
-        if (!response.ok) {
-            console.log('Updates Markdown file not found or unable to fetch.');
-            return; // Exit if the file can't be fetched (e.g., file does not exist)
-        }
+        const markdown = await response.text();
 
         // Extract the title from the frontmatter using regex
         const titleMatch = markdown.match(/^title:\s*(.*)$/m);

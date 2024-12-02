@@ -337,7 +337,6 @@ body {
     padding: 0.75rem 1rem;
     /*background-color: #fff;*/
     background-color: #000000;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: fixed;
     z-index: 10000;
   }
@@ -619,7 +618,6 @@ body {
     padding: 0 1rem;
     /*background-color: #fff;*/
     background-color: #000000;
-    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     position: fixed;
     z-index: 10000;
   }
@@ -4531,11 +4529,10 @@ body {
 <---       Update Banner        -->
 <--- -------------------------- -*/
 
-
 /* Styling for the Update Banner */
 .update-banner {
-  background-color: #757575;
-  color: #000000;
+  background-color: #000000;
+  color: #ffffff;
   padding: 15px;
   font-size: 16px;
   font-family: Arial, sans-serif;
@@ -4547,7 +4544,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
 }
 
 /* Style anchor tags inside the .update-banner container */
@@ -4558,13 +4555,13 @@ body {
 }
 
 @media only screen and (min-width: 0px) {
-  .update-content{
-    padding-top: 75px; /* Avoid content getting covered by the banner */
+  .update-banner{
+    padding-top: 68px; /* Avoid content getting covered by the banner */
   }
 }
 
 @media only screen and (min-width: 500px) {
-  .update-content{
-    padding-top: 110px; /* Avoid content getting covered by the banner */
+  .update-banner{
+    padding-top: 90px; /* Avoid content getting covered by the banner */
   }
 }
