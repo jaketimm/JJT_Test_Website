@@ -4552,7 +4552,7 @@ body {
 
 
 /* Main content below the banner */
-.main-content {
-  padding-top: 150px; /* Avoid content getting covered by the banner */
+.update-content {
+  padding-top: 100px; /* Avoid content getting covered by the banner */
   padding-bottom: 20px;
 }
