@@ -14,9 +14,6 @@ collections:
     create: true  # Allow users to create new documents in this collection
     fields:
       - label: "Title"
-        name: "title"
-        widget: "text"  # Use text instead of string
-        hint: "This field is read-only"
         default: "Update"
         disabled: true  # Or make it disabled in the front-end
       - label: "Body"
