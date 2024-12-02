@@ -6,7 +6,7 @@ async function loadMarkdown() {
       const markdown = await response.text();
   
       // Parse the markdown using the 'marked' library
-      const htmlContent = marked(markdown);
+      const htmlContent = marked.parse(markdown); // Updated for version 4.x.x
   
       // Get the title and content from the markdown
       const titleMatch = htmlContent.match(/<h1.*?>(.*?)<\/h1>/);
@@ -27,4 +27,3 @@ async function loadMarkdown() {
   
   // Call the function to load the markdown content when the page loads
   window.onload = loadMarkdown;
-  
