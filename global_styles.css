@@ -4549,8 +4549,8 @@ body {
 
 /* Style anchor tags inside the .update-banner container */
 .update-banner a {
-  color: black;        /* Make anchor text black */
-  font-weight: 1000;  /* Make anchor text italicized */
+  color: rgb(255, 255, 255);        /* Make anchor text black */
+  font-weight: 600;  /* Make anchor text italicized */
   text-decoration: none; /* Optional: Remove underline from links */
 }
 
