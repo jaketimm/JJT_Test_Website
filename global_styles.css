@@ -4528,20 +4528,37 @@ body {
 }
 
 /*-- -------------------------- -->
-<---       Widget Styles        -->
+<---       Update Banner        -->
 <--- -------------------------- -*/
 
-.widget-container {
-  width: 100%; /* You can set a specific width, or 100% to take up the full container width */
-  max-width: 500px; /* Optional: Limits the container to a max width, e.g., 500px */
-  margin: 0 auto; /* Centers the container horizontally */
-  padding: 20px; /* Adds padding around the widget inside the container */
-  background-color: #f9f9f9; /* Optional: Adds a background color */
-  border-radius: 8px; /* Optional: Adds rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Adds a soft shadow around the container */
+
+/* Styling for the Update Banner */
+.update-banner {
+  background-color: #f9c74f;
+  color: #333;
+  padding: 15px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.sk-ww-facebook-profile {
-  width: 100%; /* The widget will take up the full width of the container */
-  box-sizing: border-box; /* Includes padding and border in width calculation */
+.update-banner a {
+  color: #0066cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+/* Main content below the banner */
+.main-content {
+  padding-top: 60px; /* Avoid content getting covered by the banner */
+  padding-bottom: 20px;
 }
