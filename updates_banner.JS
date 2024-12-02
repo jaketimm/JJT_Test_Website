@@ -33,7 +33,7 @@ async function loadMarkdown() {
         const updateBanner = document.getElementById('update-banner');
         const updateContent = document.getElementById('update-content');
 
-        updateContent.innerText = htmlContent; // Set the main content as plain text
+        updateContent.innerHTML = htmlContent; // Set the main content as plain text
 
     } catch (error) {
         console.error('Error loading markdown:', error);
