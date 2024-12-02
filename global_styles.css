@@ -4550,15 +4550,9 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-.update-banner a {
-  color: #0066cc;
-  text-decoration: none;
-  font-weight: bold;
-}
-
 
 /* Main content below the banner */
 .main-content {
-  padding-top: 60px; /* Avoid content getting covered by the banner */
+  padding-top: 100px; /* Avoid content getting covered by the banner */
   padding-bottom: 20px;
 }
