@@ -4534,7 +4534,7 @@ body {
 
 /* Styling for the Update Banner */
 .update-banner {
-  background-color: #f9c74f;
+  background-color: #000000;
   color: #333;
   padding: 15px;
   font-size: 16px;
@@ -4550,10 +4550,11 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-
-/* Main content below the banner */
-.update-content {
-  padding-bottom: 20px;
+/* Style anchor tags inside the .update-banner container */
+.update-banner a {
+  color: black;        /* Make anchor text black */
+  font-style: italic;  /* Make anchor text italicized */
+  text-decoration: none; /* Optional: Remove underline from links */
 }
 
 @media only screen and (min-width: 0px) {
@@ -4561,7 +4562,6 @@ body {
     padding-top: 70px; /* Avoid content getting covered by the banner */
   }
 }
-
 
 @media only screen and (min-width: 767px) {
   .update-banner{
