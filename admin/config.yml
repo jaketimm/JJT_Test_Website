@@ -6,11 +6,20 @@ media_folder: "CMS/images" # Folder where user uploaded files should go
 public_folder: "images"
 
 collections:
-  - name: "News Post" # Used in routes, e.g., /admin/collections/post
-    label: "Post" # Used in the UI
-    folder: "CMS" # The path to the folder where the documents are stored
-    media_folder: "" # Save images in the post's own folder instead of the static folder
+  - name: "News Post"  # Used in routes, e.g., /admin/collections/post
+    label: "Post"  # Used in the UI
+    folder: "CMS"  # The path to the folder where the documents are stored
+    media_folder: ""  # Save images in the post's own folder instead of the static folder
     public_folder: ""
-    create: true # Allow users to create new documents in this collection
+    create: true  # Allow users to create new documents in this collection
     fields:
-      - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Title"
+        name: "title"
+        widget: "text"  # Use text instead of string
+        hint: "This field is read-only"
+        default: "Update"
+        disabled: true  # Or make it disabled in the front-end
+      - label: "Body"
+        name: "body"
+        widget: "markdown"
+
