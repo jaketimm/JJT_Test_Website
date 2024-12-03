@@ -43,17 +43,21 @@ function adjustSectionsOffset() {
 
 	const headerHeight = header.offsetHeight;
 
+
+
+	// Adjust Section (note that section below it needs to not have padding if the bar is present)
+	const announcementBanner = document.getElementById('announcement-bar');
+	if (announcementBanner) {
+		announcementBanner.style.paddingTop = `${headerHeight}px`;
+	}
+
 	// Adjust Topper Section
 	const topperSection = document.getElementById('RPsbs-products');
 	if (topperSection) {
 		topperSection.style.paddingTop = `${headerHeight}px`;
 	}
 
-	// Adjust Topper Section
-	const BannerSection = document.getElementById('Banner-Section');
-	if (BannerSection) {
-		BannerSection.style.paddingTop = `${headerHeight}px`;
-	}
+
 
 	// Adjust Topper Section
 	const TitleSection = document.getElementById('cs-content-831');

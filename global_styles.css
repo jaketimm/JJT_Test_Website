@@ -4526,7 +4526,7 @@ body {
 }
 
 /*-- -------------------------- -->
-<---       Update Banner        -->
+<---     CMS Update Banner      -->
 <--- -------------------------- -*/
 
 /* Styling for the Update Banner */
@@ -4565,3 +4565,52 @@ body {
     padding-top: 100px; /* Avoid content getting covered by the banner */
   }
 }
+
+/*-- -------------------------- -->
+<---       Removable Bar        -->
+<--- -------------------------- -*/
+/* Style for the announcement bar */
+#announcement-bar {
+  position: relative;
+  width: 100%;
+  background-color: #ffcc00;
+  color: black;
+  text-align: center;
+  font-size: 16px;
+  z-index: 9999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Announcement text */
+#announcement-message {
+  width: 90%;
+}
+
+/* Close button style with manual left shift */
+#close-btn {
+  position: relative; /* Allows shifting with left */
+  background: none;
+  border: none;
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+  padding: 5px;
+  line-height: 1;
+  left: -10px; /* Shift the button 50px to the left */
+}
+
+/* Ensure the close button aligns properly */
+#announcement-bar button {
+  margin-left: 10px; /* Add some space between the message and button */
+}
+
+/* Content below the bar */
+.content {
+  margin-top: 60px; /* Space to prevent content from being hidden behind the bar */
+  padding: 20px;
+}
+
+
+
