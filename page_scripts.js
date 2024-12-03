@@ -38,16 +38,16 @@ for (const item of dropDowns) {
 // Single function to adjust padding based on the navigation header height
 function adjustSectionsOffset() {
 
+	 // Get the height of the navigation header
+	const header = document.getElementById('bcw-navigation');
+
 	 // Get the announcement bar element
 	 var announcementBar = document.getElementById('update-banner');
 	 // Get the height of the announcement bar
 	 var barHeight = announcementBar.offsetHeight;
 
-	 // Get the height of the navigation header
-	const header = document.getElementById('bcw-navigation');
-
 	 // Set the margin-bottom of the element below to match the height of the announcement bar
-	 header.style.paddingTop = barHeight + 'px';
+	 header.style.paddingTop = barHeight + 5 + 'px';
 
 	const headerHeight = header.offsetHeight
 
