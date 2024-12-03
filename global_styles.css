@@ -4526,7 +4526,7 @@ body {
 }
 
 /*-- -------------------------- -->
-<---     CMS Update Banner      -->
+<---       Update Banner        -->
 <--- -------------------------- -*/
 
 /* Styling for the Update Banner */
@@ -4540,7 +4540,7 @@ body {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 11000;
+  z-index: 1000;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -4554,58 +4554,14 @@ body {
   text-decoration: none; /* Optional: Remove underline from links */
 }
 
-/*@media only screen and (min-width: 0px) {
+@media only screen and (min-width: 0px) {
   .update-banner{
     padding-top: 68px; /* Avoid content getting covered by the banner */
+  }
+}
 
-
-/*@media only screen and (min-width: 500px) {
+@media only screen and (min-width: 500px) {
   .update-banner{
     padding-top: 100px; /* Avoid content getting covered by the banner */
-
-
-
-/*-- -------------------------- -->
-<---       Removable Bar        -->
-<--- -------------------------- -*/
-/* Style for the announcement bar */
-#announcement-bar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background-color: #ffcc00;
-  color: black;
-  text-align: center;
-  font-size: 16px;
-  z-index: 20000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  }
 }
-
-/* Announcement text */
-#announcement-message {
-  width: 100%;
-}
-
-/* Close button style with manual left shift */
-#close-btn {
-  position: relative; /* Allows shifting with left */
-  background: none;
-  border: none;
-  font-size: 24px;
-  color: black;
-  cursor: pointer;
-  padding: 5px;
-  line-height: 1;
-  left: -10px; /* Shift the button 50px to the left */
-}
-
-/* Ensure the close button aligns properly */
-#announcement-bar button {
-  margin-left: 10px; /* Add some space between the message and button */
-}
-
-
-
