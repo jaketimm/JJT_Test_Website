@@ -93,28 +93,21 @@
         <!-- ============================================ -->
         <!--          Removable Announcement Bar          -->
         <!-- ============================================ -->
-        <div id="announcement-bar">
+        <!--<div id="announcement-bar">
             <span id="announcement-message">This is an important announcement! Check out the Blue crest website
                 today.</span>
             <button id="close-btn">&times;</button>
-        </div>
+        </div>-->
 
-        <script>
+       <script>
+
             // Close the announcement bar when the "X" button is clicked
-            document.getElementById('close-btn').addEventListener('click', function () {
+            //document.getElementById('close-btn').addEventListener('click', function () {
                 // Hide the announcement bar
-                document.getElementById('announcement-bar').style.display = 'none';
-        
-                // Adjust the header height
-                const header = document.getElementById('bcw-navigation');
-                const headerHeight = header ? header.offsetHeight : 0; // Fallback to 0 if header is not found
-        
-                // Adjust Banner Section (only has padding if no announcement bar present)
-                const BannerSection = document.getElementById('Banner-Section');
-                if (BannerSection) {
-                    BannerSection.style.paddingTop = `${headerHeight}px`;
-                }
-            });
+              //  document.getElementById('announcement-bar').style.display = 'none';
+                 // Get the height of the navigation header
+	            //document.getElementById('bcw-navigation').style.paddingTop = 0;
+           // });
         </script>
 
 

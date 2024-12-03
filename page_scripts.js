@@ -37,26 +37,31 @@ for (const item of dropDowns) {
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////
 // Single function to adjust padding based on the navigation header height
 function adjustSectionsOffset() {
-	// Get the height of the navigation header
+
+	 // Get the announcement bar element
+	 var announcementBar = document.getElementById('update-banner');
+	 // Get the height of the announcement bar
+	 var barHeight = announcementBar.offsetHeight;
+
+	 // Get the height of the navigation header
 	const header = document.getElementById('bcw-navigation');
-	if (!header) return;  // Ensure header exists
 
-	const headerHeight = header.offsetHeight;
+	 // Set the margin-bottom of the element below to match the height of the announcement bar
+	 header.style.paddingTop = barHeight + 'px';
 
+	const headerHeight = header.offsetHeight
 
-
-	// Adjust Section (note that section below it needs to not have padding if the bar is present)
-	const announcementBanner = document.getElementById('announcement-bar');
-	if (announcementBanner) {
-		announcementBanner.style.paddingTop = `${headerHeight}px`;
-	}
+	 // Adjust Banner Section (only has padding if no announcement bar present)
+	 const BannerSection = document.getElementById('Banner-Section');
+	 if (BannerSection) {
+		 BannerSection.style.paddingTop = `${headerHeight}px`;
+	 }
 
 	// Adjust Topper Section
 	const topperSection = document.getElementById('RPsbs-products');
 	if (topperSection) {
 		topperSection.style.paddingTop = `${headerHeight}px`;
 	}
-
 
 
 	// Adjust Topper Section

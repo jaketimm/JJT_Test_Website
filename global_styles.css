@@ -4554,30 +4554,31 @@ body {
   text-decoration: none; /* Optional: Remove underline from links */
 }
 
-@media only screen and (min-width: 0px) {
+/*@media only screen and (min-width: 0px) {
   .update-banner{
     padding-top: 68px; /* Avoid content getting covered by the banner */
-  }
-}
 
-@media only screen and (min-width: 500px) {
+
+/*@media only screen and (min-width: 500px) {
   .update-banner{
     padding-top: 100px; /* Avoid content getting covered by the banner */
-  }
-}
+
+
 
 /*-- -------------------------- -->
 <---       Removable Bar        -->
 <--- -------------------------- -*/
 /* Style for the announcement bar */
 #announcement-bar {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   background-color: #ffcc00;
   color: black;
   text-align: center;
   font-size: 16px;
-  z-index: 9999;
+  z-index: 20000;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -4585,7 +4586,7 @@ body {
 
 /* Announcement text */
 #announcement-message {
-  width: 90%;
+  width: 100%;
 }
 
 /* Close button style with manual left shift */
@@ -4604,12 +4605,6 @@ body {
 /* Ensure the close button aligns properly */
 #announcement-bar button {
   margin-left: 10px; /* Add some space between the message and button */
-}
-
-/* Content below the bar */
-.content {
-  margin-top: 60px; /* Space to prevent content from being hidden behind the bar */
-  padding: 20px;
 }
 
 
