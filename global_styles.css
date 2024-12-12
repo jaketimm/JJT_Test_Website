@@ -4554,7 +4554,7 @@ body {
   text-decoration: none; /* Optional: Remove underline from links */
 }
 
-.close-button {
+.update-banner .close-button {
   position: absolute;
   top: 10px;
   right: 10px;
