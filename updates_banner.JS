@@ -4,8 +4,8 @@ async function loadMarkdown() {
         // Fetch the markdown file (adjust the path if needed)
         const response = await fetch('CMS/updates.md');
 
-         // Check if the fetch was successful (response.status 200)
-         if (!response.ok) {
+        // Check if the fetch was successful (response.status 200)
+        if (!response.ok) {
             if (response.status === 404) {
                 console.log('Markdown file not found (404).');
             } else {
@@ -43,7 +43,25 @@ async function loadMarkdown() {
     } catch (error) {
         console.error('Error loading markdown:', error);
     }
+
+
+    const updateContent = document.querySelector('#update-content');  // Select #update-content
+    const updateBanner = document.querySelector('#update-banner');    // Select #update-banner
+    const screenHeight = window.innerHeight;  // Get the height of the screen (viewport)
+
+    console.log(updateContent.textContent);  // Print the text content of the element
+
+    // Check if the update-content div is not empty (has text or child elements)
+    if (updateContent.textContent.trim() !== '') {
+        // Apply 50px padding on mobile (screen height <= 768px) or 100px on larger screens
+        if (screenHeight <= 768) {
+            updateBanner.style.paddingTop = '50px';  // Apply 50px padding to update-banner on mobile
+        } else {
+            updateBanner.style.paddingTop = '100px'; // Apply 100px padding to update-banner on larger screens
+        }
+    }
 }
 
 // Call the function to load the markdown content when the page loads
 window.onload = loadMarkdown;
+
