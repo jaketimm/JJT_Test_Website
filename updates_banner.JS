@@ -47,6 +47,7 @@ async function loadMarkdown() {
 
     const updateContent = document.querySelector('#update-content');  // Select #update-content
     const updateBanner = document.querySelector('#update-banner');    // Select #update-banner
+    const closeButton = document.querySelector('#close-button');    // Select #update-banner
     const screenHeight = window.innerHeight;  // Get the height of the screen (viewport)
 
     console.log(updateContent.textContent);  // Print the text content of the element
@@ -56,8 +57,11 @@ async function loadMarkdown() {
         // Apply 50px padding on mobile (screen height <= 768px) or 100px on larger screens
         if (screenHeight <= 768) {
             updateBanner.style.paddingTop = '50px';  // Apply 50px padding to update-banner on mobile
+            closeButton.style.paddingTop = '50px';  // Apply 50px padding to update-banner on mobile
+            
         } else {
             updateBanner.style.paddingTop = '100px'; // Apply 100px padding to update-banner on larger screens
+            closeButton.style.paddingTop = '100px';  // Apply 50px padding to update-banner on mobile
         }
     }
 }
