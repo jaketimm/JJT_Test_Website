@@ -93,15 +93,16 @@
         <script>
             window.onload = function () {
                 const updateContent = document.querySelector('.update-content');
+                const updateBanner = document.querySelector('.update-banner');
                 const screenHeight = window.innerHeight; // Get the height of the screen (viewport)
 
                 // Check if there is any post
                 if (updateContent.textContent.trim() !== '') {
                     // Apply 50px padding on mobile (screen height <= 768px) or 100px on larger screens
                     if (screenHeight <= 768) {
-                        updateContent.style.paddingTop = '50px';  // Mobile padding
+                        updateBanner.style.paddingTop = '50px';  // Mobile padding
                     } else {
-                        updateContent.style.paddingTop = '100px'; // Larger screens padding
+                        updateBanner.style.paddingTop = '100px'; // Larger screens padding
                     }
                 }
             };
