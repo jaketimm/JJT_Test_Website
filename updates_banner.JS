@@ -54,7 +54,7 @@ async function loadMarkdown() {
     if (updateContent.textContent.trim() !== '') {
         // Apply 50px padding on mobile (screen height <= 768px) or 100px on larger screens
         if (screenWidth <= 768) {
-            updateBanner.style.paddingTop = '50px';  // Apply 50px padding to update-banner on mobile
+            updateBanner.style.paddingTop = '80px';  // Apply 50px padding to update-banner on mobile
         } else {
             updateBanner.style.paddingTop = '100px'; // Apply 100px padding to update-banner on larger screens
         }
