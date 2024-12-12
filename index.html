@@ -112,6 +112,7 @@
             // Add event listener to close button
             closeButton.addEventListener('click', () => {
                 banner.style.opacity = '0'; // Fade out the banner
+                closeButton.style.opacity = '0'; // Fade out the button
                 banner.style.transition = 'opacity 0.5s ease'; // Smooth transition for opacity change
                 
             });
