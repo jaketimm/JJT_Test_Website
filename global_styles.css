@@ -4556,7 +4556,7 @@ body {
 
 .close-button {
   position: relative;
-  right: -5px;
+  right: -25px;
   background: transparent;
   border: none;
   font-size: 20px;
@@ -4566,6 +4566,6 @@ body {
 }
 
 .update-content{
-  width: 90%;
+  width: 50%;
 }
 
