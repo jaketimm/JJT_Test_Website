@@ -47,7 +47,7 @@ async function loadMarkdown() {
 
     const updateContent = document.querySelector('#update-content');  // Select #update-content
     const updateBanner = document.querySelector('#update-banner');    // Select #update-banner
-    const closeButton = document.querySelector('.close-banner.close-button');    // Select #update-banner
+    const closeButton = document.querySelector('#close-banner');    // Select #update-banner
     const screenHeight = window.innerHeight;  // Get the height of the screen (viewport)
 
     console.log(updateContent.textContent);  // Print the text content of the element
