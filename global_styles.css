@@ -4565,3 +4565,8 @@ body {
   }
 }
 
+
+#update-banner .update-banner
+{
+  background-color: #000;
+}
