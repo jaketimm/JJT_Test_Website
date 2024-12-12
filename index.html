@@ -91,6 +91,13 @@
         </div>
 
         <script>
+            window.onload = function () {
+                const updateContent = document.querySelector('.update-content');
+
+                if (updateContent.offsetHeight > 0) {
+                    updateContent.style.paddingTop = '25px';
+                }
+            };
             window.onscroll = function () {
                 var banner = document.querySelector('.update-banner');
                 if (window.scrollY > 0) {
