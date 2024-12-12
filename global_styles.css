@@ -4544,7 +4544,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
+  transition: opacity 0.1s ease-out; /* Smooth transition for opacity */
 }
 
 /* Style anchor tags inside the .update-banner container */

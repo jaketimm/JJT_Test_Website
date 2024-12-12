@@ -86,9 +86,22 @@
     <main>
 
         <!-- Update Banner Section, content injected by updates_banner.JS -->
-         <div id="update-banner" class="update-banner">
+        <div id="update-banner" class="update-banner">
             <div id="update-content" class="update-content"></div>
         </div>
+
+        <script>
+            window.onscroll = function () {
+                var banner = document.querySelector('.update-banner');
+                if (window.scrollY > 0) {
+                    // Fade out the banner when you scroll down
+                    banner.style.opacity = '0';
+                } else {
+                    // Fade it back in when at the top of the page
+                    banner.style.opacity = '1';
+                }
+            };
+        </script>
 
         <!-- ============================================ -->
         <!--             Fixed Banner at Top              -->
@@ -318,8 +331,8 @@
     <!-- Script needed for rendering Markdown -->
     <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-     <!-- Link to gloabl Javascript file -->
-     <script src="updates_banner.JS"></script>
+    <!-- Link to gloabl Javascript file -->
+    <script src="updates_banner.JS"></script>
 
 
 </body>
