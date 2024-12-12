@@ -92,15 +92,20 @@
 
         <script>
             window.onload = function () {
-                const updateBanner = document.querySelector('.update-banner');
+                const updateContent = document.querySelector('.update-content');
+                const screenHeight = window.innerHeight; // Get the height of the screen (viewport)
 
                 // Check if the element's height is greater than 0
-                if (updateBanner.offsetHeight > 0) {
-                    // Add 25px to the current padding-top value
-                    const currentPaddingTop = parseInt(window.getComputedStyle(updateBanner).paddingTop, 10);
-                    updateBanner.style.paddingTop = `${currentPaddingTop + 50}px`;
+                if (updateContent.offsetHeight > 0) {
+                    // Apply 50px padding on mobile (screen height <= 768px) or 100px on larger screens
+                    if (screenHeight <= 768) {
+                        updateContent.style.paddingTop = '50px';  // Mobile padding
+                    } else {
+                        updateContent.style.paddingTop = '100px'; // Larger screens padding
+                    }
                 }
             };
+
             window.onscroll = function () {
                 var banner = document.querySelector('.update-banner');
                 if (window.scrollY > 0) {

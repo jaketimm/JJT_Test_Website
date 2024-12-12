@@ -4554,15 +4554,3 @@ body {
   text-decoration: none; /* Optional: Remove underline from links */
 }
 
-@media only screen and (min-width: 0px) {
-  .update-banner{
-    padding-top: 43px; /* Avoid content getting covered by the banner */
-  }
-}
-
-@media only screen and (min-width: 500px) {
-  .update-banner{
-    padding-top: 75px; /* Avoid content getting covered by the banner */
-  }
-}
-
