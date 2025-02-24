@@ -78,3 +78,57 @@ for (const item of faqItems) {
 	item.addEventListener('click', onClick)
 }
 
+//////////////////////////////////////////////////////////////////////////////////
+//animate typing words on screen 
+const words = ['Go', 'And', 'Explore'];
+const animatedText = document.querySelector('.cs-animated-text');
+let wordIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
+let isFinalCycle = false;
+
+// Start with first word already displayed
+animatedText.textContent = words[0];
+charIndex = words[0].length;
+isDeleting = true; // Start in deleting mode
+
+function type() {
+    const currentWord = words[wordIndex];
+    
+    // Check if we're on the last word (three)
+    if (wordIndex === words.length - 1 && !isDeleting && charIndex === currentWord.length) {
+        animatedText.classList.add('stopped');
+        return; // Stop the animation
+    }
+
+    if (!isDeleting) {
+        // Typing
+        animatedText.textContent = currentWord.substring(0, charIndex + 1);
+        charIndex++;
+        
+        if (charIndex === currentWord.length) {
+            // Pause before deleting (changed to 750ms)
+            setTimeout(() => {
+                isDeleting = true;
+            }, 750);
+        }
+    } else {
+        // Deleting
+        animatedText.textContent = currentWord.substring(0, charIndex - 1);
+        charIndex--;
+        
+        if (charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+        }
+    }
+
+    // Adjust timing based on typing or deleting
+    const typingSpeed = isDeleting ? 50 : 150;
+    setTimeout(type, typingSpeed);
+}
+
+// Start the animation when the page loads with 500ms delay before first deletion
+document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(type, 500); // Initial delay before starting deletion
+});

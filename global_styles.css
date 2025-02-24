@@ -3043,6 +3043,7 @@ body {
   /* Change from justify to center */
   max-width: 43.75rem;
   margin: 0 auto 1rem;
+  margin-bottom: 0;
   /* Center margin horizontally */
   color: #fff;
   /* Retain your color */
@@ -4569,3 +4570,40 @@ body {
   width: 50%;
 }
 
+
+/*-- -------------------------- -->
+<---          Typed Text        -->
+<---           Amination        -->
+<--- -------------------------- -*/
+.cs-animated-text {
+
+  /*-- font-size: clamp(2.4375rem, 6.4vw, 3.8125rem); -*/
+  font-size: var(--headerFontSize);
+  font-weight: 900;
+  line-height: 1.2em;
+  text-align: inherit;
+  max-width: 43.75rem;
+  margin: 0 0 1rem 0;
+  color: #ffffff;
+  position: relative;
+  display: inline-block;
+}
+
+
+.cs-animated-text::after {
+  content: '|';
+  animation: blink 0.7s infinite;
+  margin-left: 2px;
+}
+
+/* Stop cursor blink on final word */
+.cs-animated-text.stopped::after {
+  animation: none;
+  opacity: 0; /*Hide cursor when finished*/
+}
+
+@keyframes blink {
+  50% {
+      opacity: 0;
+  }
+}
