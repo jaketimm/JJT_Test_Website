@@ -1,47 +1,53 @@
-// Include all images to cycle
-const imagesDesktop = [
-    'images/20180815_100849.jpg',
-    'images/20180816_184505.jpg',
-    'images/20180816_190002.jpg'
+// Define images, sorted by number
+const imageList = [
+    { image: 'images/20180815_100849.jpg', mobile_image: 'images/20180815_100849-m-short.jpg', number: 1 },
+    { image: 'images/20180816_184505.jpg', mobile_image: 'images/20180816_184505-m-short.jpg', number: 2 },
+    { image: 'images/20180816_190002.jpg', mobile_image: 'images/20180816_190002-m-short.jpg', number: 3 }
 ];
 
-// Cropped versions of images for 650px width or less, 600px height
-const imagesMobile = [
-    'images/20180815_100849-m-short.jpg',
-    'images/20180816_184505-m-short.jpg',
-    'images/20180816_190002-m-short.jpg'
-];
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+// Code to load and display images based on screen size and image number
+///////////////////////////////////////////////////////////////////////////////////////////////
+
+// Sort images by number to ensure correct order
+const sortedImages = imageList.sort((a, b) => a.number - b.number);
 
 let currentIndex = 0;
-let images = [];
+let currentImages = [];
 
 // Function to set images based on screen size
 function setImages() {
-    images = (window.innerWidth < 650) ? imagesMobile : imagesDesktop;
-    return images; // Return the current set of images
+    currentImages = sortedImages;
+    return currentImages;
 }
 
 // Function to change the banner image 
 function changeBannerImage() {
     const picture = document.getElementById('bannerPicture');
     const sources = picture.getElementsByTagName('source');
+    const currentImage = currentImages[currentIndex];
+    
     if (sources.length > 0) {
-        const currentImage = images[currentIndex];
-        sources[0].srcset = currentImage; // Adjust as needed
-        picture.querySelector('img').src = currentImage; // Fallback
+        sources[0].srcset = window.innerWidth < 650 ? 
+            currentImage.mobile_image : 
+            currentImage.image;
+        picture.querySelector('img').src = window.innerWidth < 650 ? 
+            currentImage.mobile_image : 
+            currentImage.image;
     }
 }
 
-
 // Function to move to the next image
 function nextImage() {
-    currentIndex = (currentIndex + 1) % images.length; // Move to next image
+    currentIndex = (currentIndex + 1) % currentImages.length;
     changeBannerImage();
 }
 
 // Function to move to the previous image
 function prevImage() {
-    currentIndex = (currentIndex - 1 + images.length) % images.length; // Move to previous image
+    currentIndex = (currentIndex - 1 + currentImages.length) % currentImages.length;
     changeBannerImage();
 }
 
@@ -53,9 +59,9 @@ function initialize() {
 
 // Update images on resize
 window.addEventListener('resize', () => {
-    const previousIndex = currentIndex; // Save the current index
+    const previousIndex = currentIndex;
     setImages();
-    currentIndex = Math.min(previousIndex, images.length - 1); // Ensure currentIndex is within bounds
+    currentIndex = Math.min(previousIndex, currentImages.length - 1);
     changeBannerImage();
 });
 
@@ -63,40 +69,35 @@ window.addEventListener('resize', () => {
 window.addEventListener('load', initialize);
 
 //////////////////////////////////////////////////////////
-// Preload the homepage background images that are initially hidden
-// After page finishes loading
-let hasPreloaded = false;  //flag to make sure images can only be preloaded once
+// Preload images with number > 1
+let hasPreloaded = false;
 
 document.addEventListener('DOMContentLoaded', () => {
     function preloadImages(images) {
         images.forEach((image) => {
             const img = new Image();
-            img.src = image; // This starts loading the image
+            img.src = image;
         });
     }
 
-    // Desktop images to preload (all images except the default one)
-    const imagesDesktop = [
-        'images/20180816_184505.jpg',
-        'images/20180816_190002.jpg'
-    ];
-    
-    // Mobile images to preload (all images except the default one)
-    const imagesMobile = [
-        'images/20180816_184505-m-short.jpg',
-        'images/20180816_190002-m-short.jpg'
-    ];
-    
-    // Function to set images based on screen size
-    function setImages() {
-        return (window.innerWidth < 650) ? imagesMobile : imagesDesktop; // Adjust the width as needed
+    // Get images to preload (all images with number > 1)
+    function getImagesToPreload() {
+        const isMobile = window.innerWidth < 650;
+        return sortedImages
+            .filter(img => img.number > 1)
+            .map(img => isMobile ? img.mobile_image : img.image);
     }
 
     // Preload images based on the initial screen size
-    const imagesToPreload = setImages();
-    if (!hasPreloaded){
+    if (!hasPreloaded) {
+        const imagesToPreload = getImagesToPreload();
         preloadImages(imagesToPreload);
-        hasPreloaded = true; // Set flag to true after preloading
+        hasPreloaded = true;
     }
-    
+
+    // Update preloaded images on resize if needed
+    window.addEventListener('resize', () => {
+        // Optional: You could add logic here to preload different versions
+        // if the screen size changes significantly
+    });
 });
